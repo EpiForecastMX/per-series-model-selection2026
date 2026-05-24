@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/
+outputs/
+checkpoints/
+lightning_logs/
+*.ckpt
+.DS_Store
