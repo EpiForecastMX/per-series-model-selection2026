@@ -13,6 +13,7 @@ as the candidate models, and reported on the scale-free sMAPE and MASE.
 Input (./data/): weekly_series.csv  columns: series, stratum, week, value
 (assembled from the public SINAVE bulletin; not redistributed here).
 """
+
 from __future__ import annotations
 
 import argparse
@@ -21,10 +22,12 @@ import warnings
 import numpy as np
 import pandas as pd
 
-import sys, os
+import sys
+import os
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from cross_validation import rolling_origin_folds, HORIZON  # noqa: E402
-from metrics import smape, mase  # noqa: E402
+from metrics import smape  # noqa: E402
 
 warnings.filterwarnings("ignore")
 ARIMA_ORDERS = [(1, 1, 1), (2, 1, 1), (1, 1, 2), (2, 1, 2), (0, 1, 1), (1, 0, 1)]
@@ -41,13 +44,20 @@ def _fourier(n: int, start: int = 0, period: float = 52.0, k: int = K) -> np.nda
 
 def sarima_forecast(train: np.ndarray, h: int) -> np.ndarray:
     from statsmodels.tsa.statespace.sarimax import SARIMAX
+
     yl = np.log1p(train.astype(float))
     Xtr, Xte = _fourier(len(yl)), _fourier(h, start=len(yl))
     best = None
     for od in ARIMA_ORDERS:
         try:
-            r = SARIMAX(yl, exog=Xtr, order=od, trend="c", enforce_stationarity=False,
-                        enforce_invertibility=False).fit(disp=False, maxiter=50)
+            r = SARIMAX(
+                yl,
+                exog=Xtr,
+                order=od,
+                trend="c",
+                enforce_stationarity=False,
+                enforce_invertibility=False,
+            ).fit(disp=False, maxiter=50)
             if best is None or r.aic < best[0]:
                 best = (r.aic, r)
         except Exception:
@@ -75,10 +85,12 @@ if __name__ == "__main__":
     a = ap.parse_args()
     df = pd.read_csv(a.data)
     if a.mode == "patchtst":
-        print("PatchTST baseline: train a global GluonTS PatchTST per stratum "
-              "(patch length 16, 104-week context) over the rolling-origin folds; "
-              "see the GluonTS reference implementation. Omitted here to keep the "
-              "release dependency-light.")
+        print(
+            "PatchTST baseline: train a global GluonTS PatchTST per stratum "
+            "(patch length 16, 104-week context) over the rolling-origin folds; "
+            "see the GluonTS reference implementation. Omitted here to keep the "
+            "release dependency-light."
+        )
         raise SystemExit(0)
     res = []
     for (s, st), g in df.groupby(["series", "stratum"]):
@@ -87,4 +99,6 @@ if __name__ == "__main__":
             res.append({"series": s, "stratum": st, "smape": out[0], "mase": out[1]})
     R = pd.DataFrame(res)
     print(f"Auto-ARIMA+Fourier over {len(R)} series-stratum combinations:")
-    print(f"  median sMAPE = {R.smape.median():.2f}   median MASE = {R.mase.median():.3f}")
+    print(
+        f"  median sMAPE = {R.smape.median():.2f}   median MASE = {R.mase.median():.3f}"
+    )

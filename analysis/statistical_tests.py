@@ -21,6 +21,7 @@ SINAVE bulletin):
 Also in ./data/: per_series_out_of_sample_2026.csv, the per-entity out-of-sample
 table referenced by the paper (sMAPE and MASE per model, 111 series, W03-W18).
 """
+
 from __future__ import annotations
 
 import numpy as np
@@ -31,7 +32,7 @@ from statsmodels.tsa.stattools import acovf
 
 RIVALS = ["prophet", "ensemble", "stacking"]
 RECURRENT = "deepar"
-LOCKED_NATIONAL = "ensemble"   # selected national-general model
+LOCKED_NATIONAL = "ensemble"  # selected national-general model
 
 
 def wilcoxon_cv(path: str = "data/cv_metrics_per_series.csv") -> pd.DataFrame:
@@ -40,13 +41,19 @@ def wilcoxon_cv(path: str = "data/cv_metrics_per_series.csv") -> pd.DataFrame:
     rows = []
     for rival in RIVALS:
         stat, p = wilcoxon(pivot[RECURRENT], pivot[rival], alternative="less")
-        rows.append({"comparison": f"{RECURRENT}<{rival}", "W": stat,
-                     "p_value": p, "n": len(pivot)})
+        rows.append(
+            {
+                "comparison": f"{RECURRENT}<{rival}",
+                "W": stat,
+                "p_value": p,
+                "n": len(pivot),
+            }
+        )
     return pd.DataFrame(rows)
 
 
 def diebold_mariano(e1: np.ndarray, e2: np.ndarray, h: int = 1) -> tuple[float, float]:
-    d = e1 ** 2 - e2 ** 2
+    d = e1**2 - e2**2
     n = len(d)
     gamma = acovf(d, nlag=max(h - 1, 0), fft=False)
     var_d = (gamma[0] + (2 * sum(gamma[1:h]) if h > 1 else 0)) / n
@@ -73,7 +80,9 @@ def dm_2026(path: str = "data/national_2026_weekly.csv") -> pd.DataFrame:
     df = pd.read_csv(path)
     df = df[df["week"] >= 2]
     obs = df["observed"].to_numpy(float)
-    err = {m: obs - df[m].to_numpy(float) for m in [LOCKED_NATIONAL, *RIVALS] if m in df}
+    err = {
+        m: obs - df[m].to_numpy(float) for m in [LOCKED_NATIONAL, *RIVALS] if m in df
+    }
     rivales = [m for m in RIVALS if m in err]
     crudos, stats = [], []
     for rival in rivales:
@@ -81,11 +90,18 @@ def dm_2026(path: str = "data/national_2026_weekly.csv") -> pd.DataFrame:
         stats.append(hln)
         crudos.append(p)
     ajustados = holm(crudos)
-    return pd.DataFrame([
-        {"comparison": f"{LOCKED_NATIONAL}_vs_{r}", "DM_HLN": round(s, 4),
-         "p_raw": round(p, 4), "p_holm": round(a, 4), "n": len(df)}
-        for r, s, p, a in zip(rivales, stats, crudos, ajustados)
-    ])
+    return pd.DataFrame(
+        [
+            {
+                "comparison": f"{LOCKED_NATIONAL}_vs_{r}",
+                "DM_HLN": round(s, 4),
+                "p_raw": round(p, 4),
+                "p_holm": round(a, 4),
+                "n": len(df),
+            }
+            for r, s, p, a in zip(rivales, stats, crudos, ajustados)
+        ]
+    )
 
 
 if __name__ == "__main__":

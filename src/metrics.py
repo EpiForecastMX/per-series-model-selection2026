@@ -4,6 +4,7 @@ All functions take 1-D numeric arrays and return scalar floats. MASE also
 requires the training series to scale by the seasonal-naive benchmark.
 These are the metrics defined in the paper's Evaluation Protocol.
 """
+
 from __future__ import annotations
 
 import numpy as np
@@ -31,7 +32,9 @@ def smape(y_true: ArrayLike, y_pred: ArrayLike) -> float:
     return float(np.mean(2.0 * np.abs(y_true[mask] - y_pred[mask]) / denom[mask]) * 100)
 
 
-def mase(y_true: ArrayLike, y_pred: ArrayLike, y_train: ArrayLike, season: int = 52) -> float:
+def mase(
+    y_true: ArrayLike, y_pred: ArrayLike, y_train: ArrayLike, season: int = 52
+) -> float:
     """Mean Absolute Scaled Error against a seasonal-naive benchmark (lag
     `season`). A value below 1 beats seasonal persistence regardless of scale."""
     y_true, y_pred = np.asarray(y_true, float), np.asarray(y_pred, float)

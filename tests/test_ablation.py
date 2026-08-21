@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import pathlib
 import unittest
 from unittest.mock import patch
 
@@ -70,3 +72,61 @@ class DynamicAblationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestPublishedTable(unittest.TestCase):
+    """Pin the released numbers so a refactor cannot move them silently."""
+
+    CSV = pathlib.Path(__file__).resolve().parents[1] / "data" / "ablation_results.csv"
+
+    # Table 3 of the paper, exactly as printed. sMAPE at one decimal, p at two.
+    PRINTED = {
+        ("static", "prophet+deepar+ensemble+stacking"): ("27.4", None),
+        ("static", "deepar+ensemble+stacking"): ("27.4", "0.84"),
+        ("static", "prophet+ensemble+stacking"): ("28.0", "0.49"),
+        ("static", "prophet+deepar+stacking"): ("27.4", "0.69"),
+        ("static", "prophet+deepar+ensemble"): ("27.4", "1.00"),
+        ("static", "prophet"): ("26.7", "0.09"),
+        ("dynamic", "prophet+deepar+ensemble+stacking"): ("28.5", None),
+        ("dynamic", "deepar+ensemble+stacking"): ("29.4", "0.02"),
+        ("dynamic", "prophet+ensemble+stacking"): ("26.4", "0.07"),
+        ("dynamic", "prophet+deepar+stacking"): ("28.5", "0.23"),
+        ("dynamic", "prophet+deepar+ensemble"): ("28.8", "0.87"),
+        ("dynamic", "prophet"): ("27.6", "0.73"),
+        ("dynamic", "frozen_baseline"): ("32.7", None),
+    }
+
+    def _rows(self):
+        with self.CSV.open() as fh:
+            return list(csv.DictReader(fh))
+
+    def test_the_release_has_the_nineteen_expected_rows(self):
+        rows = self._rows()
+        self.assertEqual(len(rows), 19)
+        self.assertEqual(sum(r["regime"] == "static" for r in rows), 9)
+        self.assertEqual(sum(r["regime"] == "dynamic" for r in rows), 10)
+        for r in rows:
+            self.assertEqual(int(r["n"]), 99)
+
+    def test_every_printed_cell_derives_from_the_csv_without_double_rounding(self):
+        """Formatting the stored value must give the figure the paper prints.
+
+        The CSV used to store three decimals, so a p-value of 0.694911 was saved as
+        0.695 and a reader rounding the file could not recover the printed 0.69.
+        """
+        rows = {(r["regime"], r["policy"]): r for r in self._rows()}
+        # OJO: no llamar `smape` a la variable de bucle; `smape` es la funcion
+        # importada arriba y quedaria sombreada dentro del test.
+        for key, (esperado_smape, p) in self.PRINTED.items():
+            r = rows[key]
+            self.assertEqual(
+                f"{float(r['median_smape']):.1f}", esperado_smape, f"sMAPE moved: {key}"
+            )
+            if p is None:
+                self.assertEqual(
+                    r["p_vs_full_pool"], "", f"baseline row has a p: {key}"
+                )
+            else:
+                self.assertEqual(
+                    f"{float(r['p_vs_full_pool']):.2f}", p, f"p moved: {key}"
+                )

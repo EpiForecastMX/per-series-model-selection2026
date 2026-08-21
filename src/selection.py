@@ -6,13 +6,14 @@ a 5% relative margin, break ties on MASE then RMSE, and route structurally
 low-incidence series to their socio-urban region's model. The rule depends
 only on past observations and emits an auditable record per series.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Mapping
 
-REL_MARGIN = 0.05          # 5% relative-sMAPE band for the primary criterion
-LOW_INCIDENCE_CASES = 5    # cumulative-count threshold over the trailing window
+REL_MARGIN = 0.05  # 5% relative-sMAPE band for the primary criterion
+LOW_INCIDENCE_CASES = 5  # cumulative-count threshold over the trailing window
 TRAILING_WEEKS = 52
 
 
@@ -38,13 +39,18 @@ def select_model(candidates: Mapping[str, CVMetrics]) -> tuple[str, str]:
         return best_name, "only candidate"
 
     second = ranked[1][1]
-    rel_gap = (second.smape - best.smape) / best.smape if best.smape > 0 else float("inf")
+    rel_gap = (
+        (second.smape - best.smape) / best.smape if best.smape > 0 else float("inf")
+    )
     if rel_gap > REL_MARGIN:
         return best_name, f"sMAPE (relative gap {rel_gap:.1%} > {REL_MARGIN:.0%})"
 
     # within-band tiebreak on MASE, then RMSE
-    band = {n: m for n, m in candidates.items()
-            if best.smape == 0 or (m.smape - best.smape) / best.smape <= REL_MARGIN}
+    band = {
+        n: m
+        for n, m in candidates.items()
+        if best.smape == 0 or (m.smape - best.smape) / best.smape <= REL_MARGIN
+    }
     by_mase = sorted(band.items(), key=lambda kv: kv[1].mase)
     if len(by_mase) == 1 or by_mase[0][1].mase < by_mase[1][1].mase:
         return by_mase[0][0], "MASE tiebreaker (within 5% sMAPE band)"

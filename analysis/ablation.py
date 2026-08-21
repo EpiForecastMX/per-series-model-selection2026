@@ -7,7 +7,8 @@ that were already locked.
 
 Two regimes are separated:
 
-  static   the rule selects once from cross-validated evidence, as deployed;
+  static   the rule selects once from cross-validated evidence, as in the
+           frozen baseline assignment;
   dynamic  the rule reselects on the early 2026 weeks and is scored on the
            later weeks, which the reselection never observes.
 
@@ -166,9 +167,13 @@ def summarize(per_series: pd.DataFrame, label: str) -> pd.DataFrame:
                 "regime": label,
                 "policy": c,
                 "n": len(v),
-                "median_smape": round(float(v.median()), 2),
-                "mean_smape": round(float(v.mean()), 2),
-                "p_vs_full_pool": None if np.isnan(p) else round(p, 3),
+                # Sin redondeo agresivo. A tres decimales el CSV guardaba 0.695
+                # para un p cuyo valor real es 0.6949...: quien redondee el CSV a
+                # dos decimales no recupera con certeza lo que el paper imprime.
+                # Seis decimales bastan para reproducir cualquier cifra publicada.
+                "median_smape": round(float(v.median()), 6),
+                "mean_smape": round(float(v.mean()), 6),
+                "p_vs_full_pool": None if np.isnan(p) else round(p, 6),
             }
         )
     return pd.DataFrame(out)
@@ -197,7 +202,7 @@ if __name__ == "__main__":
     res.loc[baseline_index, "policy"] = "frozen_baseline"
     res.loc[baseline_index, "n"] = len(dynamic_per_series)
     res.loc[baseline_index, "median_smape"] = round(
-        float(dynamic_per_series["frozen"].median()), 2
+        float(dynamic_per_series["frozen"].median()), 6
     )
     res["n"] = res["n"].astype(int)
     res.to_csv("data/ablation_results.csv", index=False)
