@@ -5,6 +5,7 @@ expanding training window, as described in the paper's Evaluation Protocol.
 No fold sees future weeks; this yields the leakage-free splits over which the
 per-series CV metrics are accumulated.
 """
+
 from __future__ import annotations
 
 from typing import Iterator
@@ -16,7 +17,10 @@ MIN_TRAIN = 110
 
 
 def rolling_origin_folds(
-    n: int, horizon: int = HORIZON, stride: int = STRIDE, n_folds: int = N_FOLDS,
+    n: int,
+    horizon: int = HORIZON,
+    stride: int = STRIDE,
+    n_folds: int = N_FOLDS,
     min_train: int = MIN_TRAIN,
 ) -> Iterator[tuple[slice, slice]]:
     """Yield (train_slice, test_slice) pairs for a series of length `n`.

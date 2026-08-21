@@ -12,6 +12,7 @@ Input (./data/): national_strata_forecast.csv
 CV error standard deviations per stratum are passed on the command line or
 taken from the defaults below.
 """
+
 from __future__ import annotations
 
 import numpy as np
@@ -24,9 +25,9 @@ CV_RMSE = np.array([372.23, 239.42, 101.44])
 def reconcile(fc: np.ndarray, cv_rmse: np.ndarray = CV_RMSE) -> np.ndarray:
     """fc: 3 x T array of base forecasts [general; women; men]. Returns the
     coherent reconciled 3 x T array (general = women + men)."""
-    S = np.array([[1.0, 1.0], [1.0, 0.0], [0.0, 1.0]])   # rows g/w/m; cols women/men
-    W_inv = np.linalg.inv(np.diag(cv_rmse ** 2))
-    G = np.linalg.inv(S.T @ W_inv @ S) @ S.T @ W_inv      # 2 x 3
+    S = np.array([[1.0, 1.0], [1.0, 0.0], [0.0, 1.0]])  # rows g/w/m; cols women/men
+    W_inv = np.linalg.inv(np.diag(cv_rmse**2))
+    G = np.linalg.inv(S.T @ W_inv @ S) @ S.T @ W_inv  # 2 x 3
     return S @ (G @ fc)
 
 
@@ -39,8 +40,12 @@ if __name__ == "__main__":
     df = pd.read_csv("data/national_strata_forecast.csv")
     base = df[["fc_general", "fc_women", "fc_men"]].to_numpy(float).T
     rec = reconcile(base)
-    shift = {s: float(np.mean(np.abs(rec[i] - base[i]) / base[i]) * 100)
-             for i, s in enumerate(["general", "women", "men"])}
+    shift = {
+        s: float(np.mean(np.abs(rec[i] - base[i]) / base[i]) * 100)
+        for i, s in enumerate(["general", "women", "men"])
+    }
     print(f"Incoherence  pre={incoherence(base):.2f}%  post={incoherence(rec):.3f}%")
-    print("Mean weekly reconciliation shift per stratum (%):",
-          {k: round(v, 2) for k, v in shift.items()})
+    print(
+        "Mean weekly reconciliation shift per stratum (%):",
+        {k: round(v, 2) for k, v in shift.items()},
+    )

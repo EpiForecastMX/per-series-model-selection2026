@@ -9,8 +9,16 @@ Code and supplementary material for
 > 25th Mexican International Conference on Artificial Intelligence (MICAI 2026),
 > Chihuahua, Mexico. Springer, Lecture Notes in Artificial Intelligence.
 
-This repository provides a self-contained reference implementation of the
-methodological core released with the paper: a deterministic and auditable
+**What a fresh clone reproduces, and what it does not.** `analysis/ablation.py`
+runs end to end on the data shipped here and regenerates Table 3 byte-identically;
+that is the paper's central claim about the selection rule. The 111-series
+sensitivity, `statistical_tests.py`, `reconciliation.py` and `baselines.py` need
+panels that are not redistributed: `data/per_series_out_of_sample_2026.csv` carries
+the published per-entity metrics, not the evidence required to re-run selection over
+all 111 combinations. See *Scope* below.
+
+This repository provides a reference implementation of the methodological core
+released with the paper: a deterministic and auditable
 **per-series model-selection rule**, the rolling-origin evaluation protocol,
 and the statistical tests, ablation, and hierarchical-reconciliation sanity
 check. It does not redistribute the production training pipeline or fitted
@@ -28,7 +36,7 @@ paper has since been accepted and the author information above is now public.
 | `src/cross_validation.py` | Evaluation Protocol | rolling-origin CV (5 folds, horizon 52, stride 13, expanding window) |
 | `analysis/statistical_tests.py` | Results / Out-of-sample | one-sided Wilcoxon signed-rank (CV) and Diebold-Mariano with HLN correction (2026) |
 | `analysis/reconciliation.py` | Discussion | minimum-trace (MinT, diagonal WLS) hierarchical reconciliation sanity check |
-| `analysis/baselines.py` | Table (baselines) | tuned Auto-ARIMA + Fourier and a PatchTST transformer under the identical CV |
+| `analysis/baselines.py` | Table (baselines) | tuned Auto-ARIMA + Fourier under the identical CV. The PatchTST mode is a **configuration note only**: it prints the setup used in the paper and exits, to keep this release dependency-light |
 | `analysis/ablation.py` | §5.1, Table 3 | **ablation of the candidate pool**: the selection rule re-run on every subset, static and dynamic regimes, paired Wilcoxon against the full pool |
 | `data/per_series_out_of_sample_2026.csv` | §4.2, supplementary material | **per-entity out-of-sample table**: sMAPE and MASE per model for all 111 series-stratum combinations |
 | `data/cv_metrics_per_series.csv` | §5.1, Table 3 | frozen cross-validation evidence used by the static selection rule |
@@ -75,7 +83,8 @@ error.
 
 `analysis/ablation.py` reproduces Table 3: the selection rule re-run restricted to each
 subset of the four candidates, in two regimes — *static*, selecting once from
-cross-validated evidence as deployed, and *dynamic*, reselecting on the early 2026 weeks
+cross-validated evidence as in the frozen baseline assignment, and *dynamic*, reselecting
+on the early 2026 weeks
 and scoring on the later weeks it never saw. Policies are compared **pairwise over the
 same series**; comparing each policy's own reassigned subset would compare different sets
 of series, which is the easiest way to get this experiment wrong.
@@ -113,7 +122,7 @@ python -m unittest discover -s tests -v   # regression tests for the full rule
 # The remaining scripts require the assembled panels described in their docstrings:
 python analysis/statistical_tests.py     # Wilcoxon (CV) + Diebold-Mariano (2026)
 python analysis/reconciliation.py         # MinT incoherence pre/post
-python analysis/baselines.py --help       # Auto-ARIMA / PatchTST baselines
+python analysis/baselines.py --help       # Auto-ARIMA (PatchTST: config note only)
 ```
 
 `requirements-analysis.txt` is the minimal environment for the released Table
