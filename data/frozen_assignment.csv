@@ -1,0 +1,100 @@
+series,stratum,model
+Aguascalientes,general,deepar
+Aguascalientes,men,deepar
+Aguascalientes,women,deepar
+Baja California,general,deepar
+Baja California,men,deepar
+Baja California,women,deepar
+Baja California Sur,general,deepar
+Baja California Sur,men,deepar
+Baja California Sur,women,deepar
+Campeche,general,deepar
+Campeche,men,deepar
+Campeche,women,deepar
+Chiapas,general,deepar
+Chiapas,men,deepar
+Chiapas,women,deepar
+Chihuahua,general,deepar
+Chihuahua,men,deepar
+Chihuahua,women,deepar
+Ciudad de México,general,deepar
+Ciudad de México,men,deepar
+Ciudad de México,women,deepar
+Coahuila,general,deepar
+Coahuila,men,deepar
+Coahuila,women,deepar
+Colima,general,deepar
+Colima,men,deepar
+Colima,women,deepar
+Durango,general,deepar
+Durango,men,deepar
+Durango,women,deepar
+Guanajuato,general,deepar
+Guanajuato,men,deepar
+Guanajuato,women,deepar
+Guerrero,general,deepar
+Guerrero,men,deepar
+Guerrero,women,deepar
+Hidalgo,general,deepar
+Hidalgo,men,deepar
+Hidalgo,women,deepar
+Jalisco,general,deepar
+Jalisco,men,deepar
+Jalisco,women,deepar
+Michoacán,general,deepar
+Michoacán,men,deepar
+Michoacán,women,deepar
+Morelos,general,deepar
+Morelos,men,deepar
+Morelos,women,deepar
+México,general,deepar
+México,men,deepar
+México,women,deepar
+Nacional,general,ensemble
+Nacional,men,prophet
+Nacional,women,ensemble
+Nayarit,general,deepar
+Nayarit,men,deepar
+Nayarit,women,deepar
+Nuevo León,general,deepar
+Nuevo León,men,deepar
+Nuevo León,women,deepar
+Oaxaca,general,deepar
+Oaxaca,men,deepar
+Oaxaca,women,deepar
+Puebla,general,deepar
+Puebla,men,deepar
+Puebla,women,deepar
+Querétaro,general,deepar
+Querétaro,men,deepar
+Querétaro,women,deepar
+Quintana Roo,general,deepar
+Quintana Roo,men,deepar
+Quintana Roo,women,deepar
+San Luis Potosí,general,deepar
+San Luis Potosí,men,deepar
+San Luis Potosí,women,deepar
+Sinaloa,general,deepar
+Sinaloa,men,deepar
+Sinaloa,women,deepar
+Sonora,general,deepar
+Sonora,men,deepar
+Sonora,women,deepar
+Tabasco,general,deepar
+Tabasco,men,deepar
+Tabasco,women,deepar
+Tamaulipas,general,deepar
+Tamaulipas,men,deepar
+Tamaulipas,women,deepar
+Tlaxcala,general,deepar
+Tlaxcala,men,deepar
+Tlaxcala,women,deepar
+Veracruz,general,deepar
+Veracruz,men,deepar
+Veracruz,women,deepar
+Yucatán,general,deepar
+Yucatán,men,deepar
+Yucatán,women,deepar
+Zacatecas,general,deepar
+Zacatecas,men,deepar
+Zacatecas,women,deepar

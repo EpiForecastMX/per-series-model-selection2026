@@ -29,6 +29,9 @@ paper has since been accepted and the author information above is now public.
 | `analysis/baselines.py` | Table (baselines) | tuned Auto-ARIMA + Fourier and a PatchTST transformer under the identical CV |
 | `analysis/ablation.py` | §5.1, Table 3 | **ablation of the candidate pool**: the selection rule re-run on every subset, static and dynamic regimes, paired Wilcoxon against the full pool |
 | `data/per_series_out_of_sample_2026.csv` | §4.2, Appendix A | **per-entity out-of-sample table**: sMAPE and MASE per model for all 111 series-stratum combinations |
+| `data/cv_metrics_per_series.csv` | §5.1, Table 3 | frozen cross-validation evidence used by the static selection rule |
+| `data/weekly_2026_per_series.csv` | §5.1, Table 3 | bulletin-aligned W03–W18 observations and locked forecasts used by the dynamic experiment |
+| `data/frozen_assignment.csv` | §5.1, Table 3 | 99 directly observed assignments fixed before any 2026 observation existed |
 | `data/ablation_results.csv` | §5.1, Table 3 | the published ablation numbers, as reported |
 
 ## Models
@@ -51,9 +54,10 @@ directly.
 
 Weekly case counts of depressive episode (CIE-10 F32) for the 32 Mexican
 federal entities are published as **open data** by the national epidemiological
-surveillance system (SINAVE) bulletin. The code expects pre-assembled weekly
-series under `data/` (not redistributed here; see the bulletin's open-data
-terms). Expected schemas are documented in each script.
+surveillance system (SINAVE) bulletin. The three compact, aggregate inputs
+needed to reproduce Table 3 are released under `data/`; they contain no
+individual-level records. The remaining analysis scripts expect pre-assembled
+panels documented in their respective docstrings.
 
 ### Week alignment
 
@@ -79,6 +83,9 @@ and is reported as such in the paper: no leave-one-out variant separates from th
 pool, and a single-model policy matches it. What does separate from the frozen baseline
 is revision.
 
+The command below runs directly from a fresh clone and rewrites
+`data/ablation_results.csv` deterministically from the three released inputs.
+
 ### Supplementary table
 
 `data/per_series_out_of_sample_2026.csv` is the per-entity out-of-sample table
@@ -97,9 +104,9 @@ be pooled.
 
 ```bash
 pip install -r requirements.txt
-# place the assembled panels under data/ (see script docstrings)
-python analysis/statistical_tests.py     # Wilcoxon (CV) + Diebold-Mariano (2026)
 python analysis/ablation.py               # candidate-pool ablation (Table 3)
+# The remaining scripts require the assembled panels described in their docstrings:
+python analysis/statistical_tests.py     # Wilcoxon (CV) + Diebold-Mariano (2026)
 python analysis/reconciliation.py         # MinT incoherence pre/post
 python analysis/baselines.py --help       # Auto-ARIMA / PatchTST baselines
 ```

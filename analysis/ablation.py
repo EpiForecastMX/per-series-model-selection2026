@@ -20,8 +20,8 @@ Comparing each policy's own reassigned subset would compare different sets of
 series and is not a valid contrast -- this is the single easiest mistake to make
 in this experiment.
 
-Inputs (place under ./data/, not redistributed; assembled from the public
-SINAVE bulletin):
+Inputs (released under ./data/; assembled from the public SINAVE bulletin and
+the frozen pre-2026 selection record):
   data/cv_metrics_per_series.csv    series, stratum, model, smape, mase, rmse
   data/weekly_2026_per_series.csv   series, stratum, week, observed, <model cols>
   data/frozen_assignment.csv        series, stratum, model   (locked before 2026)
@@ -31,15 +31,13 @@ Output: data/ablation_results.csv, plus the released copy in this repository.
 
 from __future__ import annotations
 
-import itertools
-
 import numpy as np
 import pandas as pd
 from scipy.stats import wilcoxon
 
 MODELS = ["prophet", "deepar", "ensemble", "stacking"]
-BAND = 1.05          # selection band on sMAPE, as in the paper
-SPLIT = 11           # last week used for reselection in the dynamic regime
+BAND = 1.05  # selection band on sMAPE, as in the paper
+SPLIT = 11  # last week used for reselection in the dynamic regime
 
 
 def smape(y: np.ndarray, f: np.ndarray) -> float:
@@ -93,12 +91,14 @@ def dynamic_ablation(weekly: pd.DataFrame, frozen: pd.DataFrame) -> pd.DataFrame
         early, late = g[g.week <= SPLIT], g[g.week > SPLIT]
         if len(early) < 4 or len(late) < 4:
             continue
-        err = {m: (smape(early.observed, early[m]), smape(late.observed, late[m]))
-               for m in MODELS if m in g}
+        err = {
+            m: (smape(early.observed, early[m]), smape(late.observed, late[m]))
+            for m in MODELS
+            if m in g
+        }
         if len(err) < len(MODELS) or (ser, stratum) not in base:
             continue
-        entry = {"series": ser, "stratum": stratum,
-                 "frozen": err[base[(ser, stratum)]][1]}
+        entry = {"series": ser, "stratum": stratum, "frozen": err[base[(ser, stratum)]][1]}
         for pool in pools():
             entry["+".join(pool)] = err[min(pool, key=lambda m: err[m][0])][1]
         rows.append(entry)
@@ -108,33 +108,53 @@ def dynamic_ablation(weekly: pd.DataFrame, frozen: pd.DataFrame) -> pd.DataFrame
 def summarize(per_series: pd.DataFrame, label: str) -> pd.DataFrame:
     """Median per policy, with a paired test against the full pool."""
     ref = "+".join(MODELS)
-    cols = [c for c in per_series.columns if c not in ("series", "stratum")]
+    cols = [c for c in per_series.columns if c not in ("series", "stratum", "frozen")]
     out = []
     for c in cols:
         v = per_series[c].dropna()
-        p = (np.nan if c == ref else
-             float(wilcoxon(per_series[c], per_series[ref], zero_method="zsplit").pvalue))
-        out.append({"regime": label, "policy": c, "n": len(v),
-                    "median_smape": round(float(v.median()), 2),
-                    "mean_smape": round(float(v.mean()), 2),
-                    "p_vs_full_pool": None if np.isnan(p) else round(p, 3)})
+        p = (
+            np.nan
+            if c == ref
+            else float(wilcoxon(per_series[c], per_series[ref], zero_method="zsplit").pvalue)
+        )
+        out.append(
+            {
+                "regime": label,
+                "policy": c,
+                "n": len(v),
+                "median_smape": round(float(v.median()), 2),
+                "mean_smape": round(float(v.mean()), 2),
+                "p_vs_full_pool": None if np.isnan(p) else round(p, 3),
+            }
+        )
     return pd.DataFrame(out)
 
 
 if __name__ == "__main__":
     cv = pd.read_csv("data/cv_metrics_per_series.csv")
-    cv = cv.pivot_table(index=["series", "stratum"], columns="model",
-                        values=["smape", "mase", "rmse"])
+    cv = cv.pivot_table(
+        index=["series", "stratum"], columns="model", values=["smape", "mase", "rmse"]
+    )
     cv.columns = [f"{m}_{stat}" for stat, m in cv.columns]
     cv = cv.reset_index()
 
     oos = pd.read_csv("data/per_series_out_of_sample_2026.csv").rename(
-        columns={"entity": "series"})
+        columns={"entity": "series"}
+    )
     weekly = pd.read_csv("data/weekly_2026_per_series.csv")
     frozen = pd.read_csv("data/frozen_assignment.csv")
 
     est = summarize(static_ablation(cv, oos), "static")
-    din = summarize(dynamic_ablation(weekly, frozen), "dynamic")
+    dynamic_per_series = dynamic_ablation(weekly, frozen)
+    din = summarize(dynamic_per_series, "dynamic")
     res = pd.concat([est, din], ignore_index=True)
+    baseline_index = len(res)
+    res.loc[baseline_index, "regime"] = "dynamic"
+    res.loc[baseline_index, "policy"] = "frozen_baseline"
+    res.loc[baseline_index, "n"] = len(dynamic_per_series)
+    res.loc[baseline_index, "median_smape"] = round(
+        float(dynamic_per_series["frozen"].median()), 2
+    )
+    res["n"] = res["n"].astype(int)
     res.to_csv("data/ablation_results.csv", index=False)
     print(res.to_string(index=False))

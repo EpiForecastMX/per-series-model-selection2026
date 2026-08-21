@@ -1,0 +1,1585 @@
+series,stratum,week,observed,prophet,deepar,ensemble,stacking
+Aguascalientes,general,3,31.0,25.0,27.0,33.0,28.0
+Aguascalientes,general,4,21.0,27.0,31.0,36.0,29.0
+Aguascalientes,general,5,25.0,28.0,35.0,34.0,31.0
+Aguascalientes,general,6,34.0,29.0,36.0,32.0,30.0
+Aguascalientes,general,7,18.0,30.0,31.0,32.0,30.0
+Aguascalientes,general,8,34.0,31.0,34.0,33.0,30.0
+Aguascalientes,general,9,41.0,31.0,37.0,35.0,30.0
+Aguascalientes,general,10,27.0,30.0,31.0,34.0,30.0
+Aguascalientes,general,11,29.0,30.0,28.0,34.0,30.0
+Aguascalientes,general,12,29.0,30.0,30.0,34.0,29.0
+Aguascalientes,general,13,55.0,30.0,26.0,33.0,28.0
+Aguascalientes,general,14,37.0,30.0,27.0,33.0,29.0
+Aguascalientes,general,15,28.0,30.0,23.0,33.0,29.0
+Aguascalientes,general,16,16.0,30.0,35.0,35.0,29.0
+Aguascalientes,general,17,20.0,29.0,27.0,33.0,29.0
+Aguascalientes,general,18,27.0,29.0,36.0,32.0,26.0
+Aguascalientes,men,3,7.0,7.0,6.0,10.0,7.0
+Aguascalientes,men,4,3.0,7.0,4.0,12.0,7.0
+Aguascalientes,men,5,4.0,7.0,8.0,11.0,9.0
+Aguascalientes,men,6,10.0,8.0,9.0,10.0,8.0
+Aguascalientes,men,7,8.0,8.0,6.0,10.0,9.0
+Aguascalientes,men,8,9.0,8.0,6.0,9.0,8.0
+Aguascalientes,men,9,8.0,8.0,5.0,9.0,8.0
+Aguascalientes,men,10,9.0,8.0,4.0,10.0,8.0
+Aguascalientes,men,11,6.0,8.0,5.0,8.0,8.0
+Aguascalientes,men,12,7.0,8.0,5.0,10.0,8.0
+Aguascalientes,men,13,12.0,8.0,4.0,10.0,7.0
+Aguascalientes,men,14,7.0,8.0,4.0,10.0,7.0
+Aguascalientes,men,15,6.0,8.0,5.0,11.0,7.0
+Aguascalientes,men,16,6.0,8.0,7.0,9.0,7.0
+Aguascalientes,men,17,4.0,8.0,8.0,8.0,7.0
+Aguascalientes,men,18,6.0,8.0,8.0,9.0,7.0
+Aguascalientes,women,3,24.0,18.0,20.0,25.0,23.0
+Aguascalientes,women,4,18.0,19.0,20.0,26.0,23.0
+Aguascalientes,women,5,21.0,20.0,24.0,22.0,22.0
+Aguascalientes,women,6,24.0,21.0,22.0,23.0,21.0
+Aguascalientes,women,7,10.0,22.0,16.0,23.0,22.0
+Aguascalientes,women,8,25.0,22.0,24.0,22.0,23.0
+Aguascalientes,women,9,33.0,22.0,16.0,22.0,23.0
+Aguascalientes,women,10,18.0,22.0,19.0,23.0,22.0
+Aguascalientes,women,11,23.0,22.0,15.0,23.0,21.0
+Aguascalientes,women,12,22.0,22.0,16.0,24.0,22.0
+Aguascalientes,women,13,43.0,22.0,16.0,22.0,21.0
+Aguascalientes,women,14,30.0,22.0,26.0,23.0,21.0
+Aguascalientes,women,15,22.0,22.0,24.0,25.0,22.0
+Aguascalientes,women,16,7.0,21.0,23.0,24.0,20.0
+Aguascalientes,women,17,16.0,21.0,33.0,25.0,20.0
+Aguascalientes,women,18,21.0,20.0,31.0,25.0,19.0
+Baja California,general,3,123.0,88.0,119.0,100.0,98.0
+Baja California,general,4,108.0,95.0,107.0,111.0,111.0
+Baja California,general,5,112.0,102.0,94.0,100.0,118.0
+Baja California,general,6,101.0,108.0,118.0,109.0,114.0
+Baja California,general,7,106.0,112.0,95.0,108.0,112.0
+Baja California,general,8,111.0,113.0,132.0,102.0,112.0
+Baja California,general,9,100.0,112.0,127.0,102.0,116.0
+Baja California,general,10,101.0,109.0,116.0,102.0,120.0
+Baja California,general,11,101.0,107.0,125.0,105.0,119.0
+Baja California,general,12,77.0,105.0,133.0,106.0,112.0
+Baja California,general,13,98.0,104.0,105.0,97.0,107.0
+Baja California,general,14,87.0,104.0,123.0,98.0,107.0
+Baja California,general,15,109.0,105.0,115.0,97.0,112.0
+Baja California,general,16,120.0,107.0,109.0,102.0,117.0
+Baja California,general,17,110.0,109.0,124.0,100.0,116.0
+Baja California,general,18,95.0,111.0,108.0,96.0,115.0
+Baja California,men,3,36.0,29.0,35.0,27.0,31.0
+Baja California,men,4,36.0,31.0,36.0,30.0,35.0
+Baja California,men,5,29.0,32.0,29.0,31.0,39.0
+Baja California,men,6,30.0,33.0,29.0,32.0,40.0
+Baja California,men,7,37.0,34.0,29.0,31.0,38.0
+Baja California,men,8,51.0,33.0,33.0,31.0,36.0
+Baja California,men,9,27.0,33.0,25.0,31.0,36.0
+Baja California,men,10,30.0,32.0,34.0,31.0,37.0
+Baja California,men,11,22.0,31.0,33.0,32.0,38.0
+Baja California,men,12,17.0,31.0,27.0,31.0,37.0
+Baja California,men,13,24.0,31.0,28.0,29.0,35.0
+Baja California,men,14,30.0,31.0,33.0,29.0,35.0
+Baja California,men,15,31.0,32.0,24.0,29.0,37.0
+Baja California,men,16,40.0,32.0,35.0,31.0,40.0
+Baja California,men,17,35.0,33.0,38.0,31.0,40.0
+Baja California,men,18,16.0,33.0,32.0,30.0,39.0
+Baja California,women,3,91.0,60.0,68.0,72.0,67.0
+Baja California,women,4,72.0,65.0,78.0,76.0,73.0
+Baja California,women,5,83.0,70.0,80.0,77.0,76.0
+Baja California,women,6,71.0,74.0,79.0,82.0,72.0
+Baja California,women,7,91.0,77.0,69.0,82.0,73.0
+Baja California,women,8,60.0,78.0,82.0,74.0,75.0
+Baja California,women,9,73.0,77.0,68.0,73.0,77.0
+Baja California,women,10,71.0,76.0,66.0,69.0,78.0
+Baja California,women,11,80.0,75.0,63.0,70.0,76.0
+Baja California,women,12,60.0,73.0,67.0,72.0,72.0
+Baja California,women,13,74.0,73.0,62.0,68.0,70.0
+Baja California,women,14,57.0,72.0,60.0,69.0,70.0
+Baja California,women,15,78.0,73.0,59.0,68.0,70.0
+Baja California,women,16,80.0,74.0,49.0,72.0,74.0
+Baja California,women,17,75.0,75.0,64.0,70.0,73.0
+Baja California,women,18,87.0,77.0,71.0,69.0,74.0
+Baja California Sur,general,3,13.0,15.0,9.0,14.0,12.0
+Baja California Sur,general,4,5.0,16.0,12.0,17.0,12.0
+Baja California Sur,general,5,10.0,16.0,12.0,14.0,12.0
+Baja California Sur,general,6,8.0,17.0,15.0,13.0,12.0
+Baja California Sur,general,7,14.0,18.0,16.0,13.0,12.0
+Baja California Sur,general,8,11.0,18.0,17.0,16.0,10.0
+Baja California Sur,general,9,22.0,18.0,14.0,15.0,10.0
+Baja California Sur,general,10,15.0,18.0,16.0,15.0,13.0
+Baja California Sur,general,11,11.0,18.0,13.0,14.0,12.0
+Baja California Sur,general,12,15.0,18.0,10.0,14.0,12.0
+Baja California Sur,general,13,19.0,18.0,12.0,16.0,12.0
+Baja California Sur,general,14,4.0,18.0,12.0,14.0,12.0
+Baja California Sur,general,15,15.0,17.0,15.0,16.0,12.0
+Baja California Sur,general,16,14.0,17.0,10.0,16.0,12.0
+Baja California Sur,general,17,7.0,17.0,11.0,15.0,12.0
+Baja California Sur,general,18,13.0,17.0,18.0,16.0,11.0
+Baja California Sur,men,3,5.0,7.0,6.0,3.0,4.0
+Baja California Sur,men,4,1.0,7.0,5.0,4.0,3.0
+Baja California Sur,men,5,3.0,7.0,4.0,4.0,3.0
+Baja California Sur,men,6,2.0,7.0,4.0,4.0,4.0
+Baja California Sur,men,7,4.0,7.0,5.0,3.0,3.0
+Baja California Sur,men,8,2.0,7.0,5.0,2.0,2.0
+Baja California Sur,men,9,9.0,7.0,5.0,2.0,1.0
+Baja California Sur,men,10,0.0,7.0,2.0,2.0,3.0
+Baja California Sur,men,11,1.0,7.0,4.0,3.0,3.0
+Baja California Sur,men,12,1.0,7.0,6.0,3.0,3.0
+Baja California Sur,men,13,4.0,8.0,2.0,3.0,3.0
+Baja California Sur,men,14,1.0,8.0,5.0,3.0,3.0
+Baja California Sur,men,15,1.0,8.0,5.0,3.0,4.0
+Baja California Sur,men,16,3.0,8.0,5.0,3.0,3.0
+Baja California Sur,men,17,3.0,7.0,5.0,3.0,3.0
+Baja California Sur,men,18,2.0,7.0,4.0,3.0,2.0
+Baja California Sur,women,3,8.0,10.0,8.0,9.0,9.0
+Baja California Sur,women,4,4.0,10.0,10.0,11.0,9.0
+Baja California Sur,women,5,7.0,11.0,7.0,12.0,10.0
+Baja California Sur,women,6,6.0,12.0,12.0,11.0,9.0
+Baja California Sur,women,7,10.0,12.0,10.0,10.0,9.0
+Baja California Sur,women,8,9.0,13.0,12.0,11.0,9.0
+Baja California Sur,women,9,13.0,13.0,10.0,10.0,10.0
+Baja California Sur,women,10,15.0,13.0,9.0,11.0,10.0
+Baja California Sur,women,11,8.0,12.0,12.0,12.0,10.0
+Baja California Sur,women,12,14.0,12.0,8.0,10.0,9.0
+Baja California Sur,women,13,15.0,12.0,9.0,10.0,9.0
+Baja California Sur,women,14,3.0,12.0,13.0,10.0,8.0
+Baja California Sur,women,15,14.0,12.0,12.0,10.0,9.0
+Baja California Sur,women,16,11.0,12.0,9.0,11.0,9.0
+Baja California Sur,women,17,4.0,12.0,10.0,12.0,9.0
+Baja California Sur,women,18,11.0,12.0,9.0,11.0,9.0
+Campeche,general,3,34.0,23.0,43.0,23.0,25.0
+Campeche,general,4,40.0,25.0,38.0,26.0,27.0
+Campeche,general,5,23.0,28.0,41.0,28.0,30.0
+Campeche,general,6,19.0,31.0,42.0,29.0,30.0
+Campeche,general,7,26.0,33.0,44.0,29.0,31.0
+Campeche,general,8,35.0,34.0,37.0,30.0,32.0
+Campeche,general,9,35.0,35.0,44.0,30.0,31.0
+Campeche,general,10,41.0,35.0,34.0,31.0,33.0
+Campeche,general,11,32.0,34.0,37.0,31.0,33.0
+Campeche,general,12,41.0,33.0,37.0,30.0,31.0
+Campeche,general,13,30.0,31.0,38.0,29.0,31.0
+Campeche,general,14,26.0,30.0,37.0,28.0,30.0
+Campeche,general,15,37.0,30.0,35.0,28.0,29.0
+Campeche,general,16,35.0,29.0,32.0,27.0,28.0
+Campeche,general,17,43.0,29.0,21.0,27.0,28.0
+Campeche,general,18,31.0,29.0,32.0,27.0,29.0
+Campeche,men,3,10.0,7.0,12.0,6.0,9.0
+Campeche,men,4,11.0,8.0,10.0,7.0,8.0
+Campeche,men,5,8.0,9.0,11.0,8.0,8.0
+Campeche,men,6,2.0,9.0,12.0,7.0,9.0
+Campeche,men,7,10.0,9.0,15.0,7.0,10.0
+Campeche,men,8,6.0,10.0,8.0,8.0,8.0
+Campeche,men,9,9.0,10.0,6.0,7.0,7.0
+Campeche,men,10,13.0,10.0,8.0,7.0,10.0
+Campeche,men,11,12.0,9.0,8.0,7.0,9.0
+Campeche,men,12,11.0,9.0,8.0,7.0,9.0
+Campeche,men,13,7.0,9.0,8.0,9.0,10.0
+Campeche,men,14,8.0,9.0,10.0,8.0,8.0
+Campeche,men,15,5.0,8.0,4.0,8.0,7.0
+Campeche,men,16,11.0,8.0,9.0,8.0,6.0
+Campeche,men,17,11.0,8.0,11.0,7.0,8.0
+Campeche,men,18,8.0,8.0,11.0,7.0,9.0
+Campeche,women,3,24.0,16.0,43.0,16.0,17.0
+Campeche,women,4,29.0,18.0,24.0,18.0,18.0
+Campeche,women,5,15.0,19.0,25.0,20.0,21.0
+Campeche,women,6,17.0,21.0,29.0,20.0,20.0
+Campeche,women,7,16.0,23.0,23.0,20.0,21.0
+Campeche,women,8,29.0,24.0,23.0,21.0,23.0
+Campeche,women,9,26.0,25.0,25.0,23.0,23.0
+Campeche,women,10,28.0,25.0,26.0,24.0,24.0
+Campeche,women,11,20.0,24.0,30.0,23.0,24.0
+Campeche,women,12,30.0,23.0,19.0,21.0,22.0
+Campeche,women,13,23.0,22.0,23.0,20.0,22.0
+Campeche,women,14,18.0,21.0,16.0,20.0,21.0
+Campeche,women,15,32.0,21.0,27.0,21.0,21.0
+Campeche,women,16,24.0,21.0,26.0,21.0,21.0
+Campeche,women,17,32.0,21.0,18.0,20.0,21.0
+Campeche,women,18,23.0,22.0,15.0,20.0,21.0
+Chiapas,general,3,46.0,59.0,47.0,50.0,77.0
+Chiapas,general,4,55.0,64.0,59.0,51.0,78.0
+Chiapas,general,5,60.0,71.0,66.0,51.0,79.0
+Chiapas,general,6,67.0,77.0,60.0,52.0,79.0
+Chiapas,general,7,75.0,82.0,52.0,51.0,78.0
+Chiapas,general,8,77.0,84.0,57.0,51.0,79.0
+Chiapas,general,9,68.0,85.0,70.0,52.0,80.0
+Chiapas,general,10,69.0,84.0,59.0,54.0,82.0
+Chiapas,general,11,50.0,82.0,63.0,55.0,83.0
+Chiapas,general,12,63.0,80.0,86.0,54.0,86.0
+Chiapas,general,13,83.0,78.0,60.0,53.0,78.0
+Chiapas,general,14,59.0,78.0,65.0,48.0,74.0
+Chiapas,general,15,65.0,78.0,43.0,47.0,79.0
+Chiapas,general,16,58.0,78.0,35.0,50.0,84.0
+Chiapas,general,17,60.0,78.0,38.0,51.0,81.0
+Chiapas,general,18,59.0,79.0,42.0,52.0,80.0
+Chiapas,men,3,11.0,13.0,4.0,10.0,12.0
+Chiapas,men,4,12.0,13.0,16.0,11.0,12.0
+Chiapas,men,5,15.0,14.0,13.0,10.0,16.0
+Chiapas,men,6,20.0,15.0,7.0,10.0,14.0
+Chiapas,men,7,14.0,15.0,7.0,10.0,15.0
+Chiapas,men,8,22.0,16.0,14.0,10.0,15.0
+Chiapas,men,9,10.0,16.0,28.0,10.0,16.0
+Chiapas,men,10,17.0,15.0,31.0,10.0,17.0
+Chiapas,men,11,12.0,15.0,19.0,11.0,16.0
+Chiapas,men,12,15.0,15.0,12.0,11.0,15.0
+Chiapas,men,13,27.0,15.0,11.0,11.0,15.0
+Chiapas,men,14,14.0,15.0,11.0,11.0,15.0
+Chiapas,men,15,14.0,15.0,17.0,9.0,14.0
+Chiapas,men,16,14.0,15.0,15.0,10.0,16.0
+Chiapas,men,17,11.0,15.0,14.0,10.0,16.0
+Chiapas,men,18,30.0,15.0,14.0,10.0,17.0
+Chiapas,women,3,35.0,46.0,33.0,43.0,69.0
+Chiapas,women,4,44.0,50.0,45.0,42.0,73.0
+Chiapas,women,5,52.0,54.0,46.0,45.0,73.0
+Chiapas,women,6,47.0,58.0,44.0,43.0,73.0
+Chiapas,women,7,61.0,61.0,43.0,42.0,71.0
+Chiapas,women,8,60.0,63.0,37.0,42.0,70.0
+Chiapas,women,9,58.0,64.0,41.0,45.0,72.0
+Chiapas,women,10,53.0,63.0,45.0,44.0,74.0
+Chiapas,women,11,38.0,62.0,51.0,47.0,75.0
+Chiapas,women,12,62.0,61.0,64.0,45.0,77.0
+Chiapas,women,13,91.0,60.0,59.0,43.0,69.0
+Chiapas,women,14,61.0,60.0,57.0,42.0,67.0
+Chiapas,women,15,55.0,59.0,52.0,42.0,73.0
+Chiapas,women,16,50.0,60.0,47.0,42.0,76.0
+Chiapas,women,17,52.0,60.0,30.0,41.0,74.0
+Chiapas,women,18,71.0,60.0,29.0,42.0,74.0
+Chihuahua,general,3,149.0,119.0,157.0,133.0,111.0
+Chihuahua,general,4,153.0,125.0,149.0,135.0,134.0
+Chihuahua,general,5,121.0,131.0,131.0,142.0,147.0
+Chihuahua,general,6,142.0,137.0,146.0,150.0,141.0
+Chihuahua,general,7,165.0,139.0,137.0,144.0,127.0
+Chihuahua,general,8,165.0,140.0,145.0,129.0,119.0
+Chihuahua,general,9,164.0,138.0,155.0,132.0,125.0
+Chihuahua,general,10,155.0,136.0,139.0,134.0,136.0
+Chihuahua,general,11,151.0,134.0,166.0,140.0,142.0
+Chihuahua,general,12,119.0,133.0,162.0,136.0,133.0
+Chihuahua,general,13,153.0,133.0,142.0,133.0,123.0
+Chihuahua,general,14,97.0,134.0,126.0,136.0,119.0
+Chihuahua,general,15,157.0,136.0,101.0,144.0,130.0
+Chihuahua,general,16,167.0,138.0,133.0,142.0,141.0
+Chihuahua,general,17,146.0,140.0,136.0,140.0,144.0
+Chihuahua,general,18,118.0,142.0,157.0,135.0,133.0
+Chihuahua,men,3,35.0,37.0,37.0,28.0,32.0
+Chihuahua,men,4,46.0,37.0,45.0,32.0,37.0
+Chihuahua,men,5,30.0,38.0,50.0,35.0,37.0
+Chihuahua,men,6,48.0,38.0,51.0,34.0,32.0
+Chihuahua,men,7,40.0,38.0,47.0,30.0,30.0
+Chihuahua,men,8,39.0,37.0,48.0,25.0,33.0
+Chihuahua,men,9,44.0,36.0,44.0,24.0,35.0
+Chihuahua,men,10,53.0,35.0,47.0,27.0,32.0
+Chihuahua,men,11,48.0,34.0,38.0,28.0,32.0
+Chihuahua,men,12,27.0,34.0,52.0,27.0,28.0
+Chihuahua,men,13,45.0,34.0,35.0,25.0,34.0
+Chihuahua,men,14,22.0,35.0,50.0,25.0,31.0
+Chihuahua,men,15,46.0,36.0,33.0,27.0,30.0
+Chihuahua,men,16,39.0,37.0,45.0,31.0,33.0
+Chihuahua,men,17,38.0,37.0,50.0,32.0,36.0
+Chihuahua,men,18,35.0,38.0,52.0,30.0,33.0
+Chihuahua,women,3,118.0,85.0,118.0,95.0,84.0
+Chihuahua,women,4,108.0,90.0,106.0,101.0,104.0
+Chihuahua,women,5,91.0,95.0,99.0,109.0,114.0
+Chihuahua,women,6,99.0,99.0,100.0,104.0,110.0
+Chihuahua,women,7,129.0,102.0,99.0,100.0,100.0
+Chihuahua,women,8,126.0,103.0,109.0,95.0,95.0
+Chihuahua,women,9,119.0,103.0,123.0,97.0,101.0
+Chihuahua,women,10,107.0,102.0,118.0,101.0,112.0
+Chihuahua,women,11,106.0,100.0,132.0,106.0,115.0
+Chihuahua,women,12,109.0,99.0,112.0,101.0,109.0
+Chihuahua,women,13,108.0,99.0,83.0,97.0,99.0
+Chihuahua,women,14,74.0,99.0,89.0,90.0,98.0
+Chihuahua,women,15,114.0,100.0,71.0,100.0,105.0
+Chihuahua,women,16,136.0,101.0,84.0,104.0,113.0
+Chihuahua,women,17,107.0,102.0,99.0,102.0,113.0
+Chihuahua,women,18,90.0,103.0,107.0,98.0,105.0
+Ciudad de México,general,3,423.0,364.0,356.0,373.0,337.0
+Ciudad de México,general,4,473.0,398.0,484.0,431.0,351.0
+Ciudad de México,general,5,491.0,440.0,492.0,466.0,395.0
+Ciudad de México,general,6,473.0,482.0,515.0,463.0,339.0
+Ciudad de México,general,7,507.0,516.0,476.0,454.0,356.0
+Ciudad de México,general,8,677.0,537.0,459.0,459.0,423.0
+Ciudad de México,general,9,674.0,542.0,581.0,486.0,410.0
+Ciudad de México,general,10,648.0,537.0,487.0,491.0,394.0
+Ciudad de México,general,11,688.0,526.0,523.0,490.0,385.0
+Ciudad de México,general,12,515.0,516.0,515.0,457.0,381.0
+Ciudad de México,general,13,748.0,512.0,453.0,448.0,350.0
+Ciudad de México,general,14,477.0,513.0,457.0,459.0,355.0
+Ciudad de México,general,15,633.0,521.0,339.0,484.0,374.0
+Ciudad de México,general,16,484.0,531.0,464.0,497.0,374.0
+Ciudad de México,general,17,569.0,539.0,494.0,496.0,387.0
+Ciudad de México,general,18,609.0,545.0,392.0,487.0,393.0
+Ciudad de México,men,3,128.0,102.0,128.0,104.0,104.0
+Ciudad de México,men,4,135.0,111.0,135.0,116.0,116.0
+Ciudad de México,men,5,153.0,122.0,149.0,124.0,131.0
+Ciudad de México,men,6,146.0,134.0,145.0,121.0,124.0
+Ciudad de México,men,7,146.0,143.0,121.0,120.0,122.0
+Ciudad de México,men,8,185.0,149.0,145.0,123.0,133.0
+Ciudad de México,men,9,195.0,151.0,164.0,126.0,136.0
+Ciudad de México,men,10,183.0,149.0,152.0,128.0,136.0
+Ciudad de México,men,11,180.0,146.0,156.0,128.0,135.0
+Ciudad de México,men,12,145.0,142.0,149.0,125.0,129.0
+Ciudad de México,men,13,197.0,140.0,134.0,124.0,120.0
+Ciudad de México,men,14,169.0,139.0,138.0,124.0,121.0
+Ciudad de México,men,15,155.0,140.0,147.0,125.0,129.0
+Ciudad de México,men,16,131.0,142.0,142.0,129.0,132.0
+Ciudad de México,men,17,223.0,144.0,146.0,129.0,133.0
+Ciudad de México,men,18,178.0,145.0,142.0,128.0,134.0
+Ciudad de México,women,3,297.0,260.0,292.0,271.0,242.0
+Ciudad de México,women,4,377.0,284.0,375.0,320.0,254.0
+Ciudad de México,women,5,349.0,312.0,359.0,347.0,286.0
+Ciudad de México,women,6,341.0,341.0,350.0,344.0,248.0
+Ciudad de México,women,7,364.0,364.0,297.0,335.0,265.0
+Ciudad de México,women,8,502.0,378.0,325.0,338.0,304.0
+Ciudad de México,women,9,474.0,382.0,384.0,363.0,298.0
+Ciudad de México,women,10,492.0,379.0,360.0,368.0,285.0
+Ciudad de México,women,11,559.0,372.0,337.0,363.0,277.0
+Ciudad de México,women,12,391.0,365.0,332.0,339.0,274.0
+Ciudad de México,women,13,557.0,362.0,292.0,330.0,253.0
+Ciudad de México,women,14,340.0,363.0,252.0,342.0,259.0
+Ciudad de México,women,15,490.0,366.0,265.0,362.0,276.0
+Ciudad de México,women,16,368.0,372.0,335.0,373.0,273.0
+Ciudad de México,women,17,455.0,377.0,326.0,367.0,280.0
+Ciudad de México,women,18,466.0,380.0,293.0,361.0,286.0
+Coahuila,general,3,29.0,47.0,35.0,53.0,44.0
+Coahuila,general,4,55.0,49.0,47.0,59.0,44.0
+Coahuila,general,5,36.0,51.0,52.0,61.0,50.0
+Coahuila,general,6,48.0,54.0,47.0,62.0,49.0
+Coahuila,general,7,68.0,57.0,61.0,62.0,48.0
+Coahuila,general,8,70.0,60.0,49.0,63.0,50.0
+Coahuila,general,9,54.0,61.0,46.0,66.0,49.0
+Coahuila,general,10,69.0,61.0,40.0,68.0,50.0
+Coahuila,general,11,74.0,60.0,39.0,65.0,53.0
+Coahuila,general,12,65.0,58.0,33.0,63.0,43.0
+Coahuila,general,13,79.0,56.0,49.0,60.0,46.0
+Coahuila,general,14,63.0,54.0,53.0,60.0,43.0
+Coahuila,general,15,48.0,53.0,43.0,61.0,46.0
+Coahuila,general,16,84.0,53.0,41.0,63.0,46.0
+Coahuila,general,17,68.0,55.0,35.0,63.0,52.0
+Coahuila,general,18,50.0,57.0,68.0,63.0,45.0
+Coahuila,men,3,5.0,16.0,11.0,18.0,14.0
+Coahuila,men,4,15.0,16.0,19.0,19.0,14.0
+Coahuila,men,5,11.0,16.0,17.0,19.0,15.0
+Coahuila,men,6,19.0,17.0,16.0,20.0,15.0
+Coahuila,men,7,16.0,18.0,10.0,19.0,15.0
+Coahuila,men,8,25.0,18.0,15.0,19.0,14.0
+Coahuila,men,9,15.0,18.0,16.0,20.0,14.0
+Coahuila,men,10,27.0,18.0,23.0,20.0,14.0
+Coahuila,men,11,30.0,18.0,21.0,20.0,17.0
+Coahuila,men,12,21.0,18.0,17.0,20.0,14.0
+Coahuila,men,13,29.0,17.0,20.0,19.0,14.0
+Coahuila,men,14,23.0,17.0,17.0,19.0,14.0
+Coahuila,men,15,11.0,17.0,15.0,19.0,14.0
+Coahuila,men,16,20.0,17.0,19.0,19.0,15.0
+Coahuila,men,17,18.0,18.0,20.0,19.0,16.0
+Coahuila,men,18,15.0,18.0,18.0,19.0,15.0
+Coahuila,women,3,24.0,33.0,25.0,37.0,30.0
+Coahuila,women,4,41.0,34.0,30.0,42.0,31.0
+Coahuila,women,5,23.0,37.0,30.0,39.0,35.0
+Coahuila,women,6,37.0,39.0,41.0,40.0,35.0
+Coahuila,women,7,54.0,41.0,43.0,40.0,34.0
+Coahuila,women,8,46.0,43.0,46.0,40.0,36.0
+Coahuila,women,9,39.0,44.0,34.0,38.0,35.0
+Coahuila,women,10,42.0,44.0,43.0,46.0,36.0
+Coahuila,women,11,45.0,43.0,52.0,39.0,36.0
+Coahuila,women,12,44.0,41.0,27.0,45.0,29.0
+Coahuila,women,13,48.0,40.0,39.0,39.0,33.0
+Coahuila,women,14,40.0,38.0,58.0,41.0,30.0
+Coahuila,women,15,39.0,38.0,29.0,41.0,32.0
+Coahuila,women,16,63.0,38.0,35.0,34.0,31.0
+Coahuila,women,17,50.0,38.0,57.0,38.0,36.0
+Coahuila,women,18,38.0,40.0,43.0,38.0,31.0
+Colima,general,3,36.0,47.0,32.0,41.0,70.0
+Colima,general,4,21.0,53.0,36.0,45.0,81.0
+Colima,general,5,36.0,58.0,37.0,48.0,86.0
+Colima,general,6,42.0,63.0,42.0,46.0,84.0
+Colima,general,7,52.0,65.0,47.0,45.0,80.0
+Colima,general,8,45.0,65.0,46.0,45.0,79.0
+Colima,general,9,41.0,62.0,45.0,45.0,81.0
+Colima,general,10,62.0,59.0,46.0,45.0,80.0
+Colima,general,11,57.0,56.0,47.0,46.0,76.0
+Colima,general,12,45.0,55.0,31.0,42.0,72.0
+Colima,general,13,18.0,55.0,38.0,40.0,72.0
+Colima,general,14,43.0,56.0,31.0,42.0,76.0
+Colima,general,15,27.0,58.0,32.0,45.0,81.0
+Colima,general,16,55.0,60.0,30.0,44.0,81.0
+Colima,general,17,30.0,62.0,24.0,42.0,78.0
+Colima,general,18,27.0,62.0,28.0,40.0,76.0
+Colima,men,3,7.0,18.0,10.0,9.0,26.0
+Colima,men,4,5.0,19.0,9.0,10.0,29.0
+Colima,men,5,14.0,21.0,12.0,10.0,31.0
+Colima,men,6,20.0,22.0,21.0,10.0,31.0
+Colima,men,7,16.0,23.0,16.0,10.0,31.0
+Colima,men,8,15.0,23.0,19.0,9.0,31.0
+Colima,men,9,11.0,22.0,17.0,9.0,30.0
+Colima,men,10,22.0,21.0,21.0,9.0,28.0
+Colima,men,11,20.0,20.0,20.0,9.0,27.0
+Colima,men,12,14.0,19.0,17.0,8.0,26.0
+Colima,men,13,2.0,19.0,16.0,8.0,27.0
+Colima,men,14,18.0,20.0,15.0,9.0,28.0
+Colima,men,15,6.0,20.0,14.0,9.0,29.0
+Colima,men,16,31.0,21.0,13.0,9.0,29.0
+Colima,men,17,6.0,22.0,8.0,8.0,28.0
+Colima,men,18,11.0,22.0,8.0,8.0,28.0
+Colima,women,3,29.0,31.0,32.0,26.0,43.0
+Colima,women,4,16.0,34.0,27.0,24.0,51.0
+Colima,women,5,22.0,38.0,30.0,28.0,54.0
+Colima,women,6,22.0,41.0,29.0,28.0,52.0
+Colima,women,7,36.0,42.0,23.0,28.0,49.0
+Colima,women,8,30.0,42.0,24.0,26.0,48.0
+Colima,women,9,30.0,40.0,32.0,27.0,50.0
+Colima,women,10,40.0,38.0,31.0,27.0,51.0
+Colima,women,11,37.0,37.0,29.0,26.0,48.0
+Colima,women,12,31.0,36.0,20.0,29.0,45.0
+Colima,women,13,16.0,36.0,16.0,25.0,44.0
+Colima,women,14,38.0,37.0,20.0,26.0,47.0
+Colima,women,15,21.0,38.0,15.0,26.0,50.0
+Colima,women,16,65.0,39.0,19.0,24.0,51.0
+Colima,women,17,31.0,40.0,19.0,26.0,49.0
+Colima,women,18,16.0,40.0,18.0,26.0,47.0
+Durango,general,3,93.0,71.0,64.0,77.0,89.0
+Durango,general,4,75.0,75.0,109.0,97.0,97.0
+Durango,general,5,44.0,79.0,94.0,91.0,101.0
+Durango,general,6,97.0,82.0,116.0,87.0,99.0
+Durango,general,7,68.0,85.0,91.0,86.0,97.0
+Durango,general,8,58.0,87.0,70.0,83.0,98.0
+Durango,general,9,115.0,87.0,93.0,97.0,101.0
+Durango,general,10,120.0,87.0,122.0,88.0,104.0
+Durango,general,11,114.0,86.0,85.0,96.0,105.0
+Durango,general,12,97.0,85.0,84.0,93.0,102.0
+Durango,general,13,120.0,83.0,102.0,85.0,98.0
+Durango,general,14,75.0,82.0,120.0,94.0,95.0
+Durango,general,15,105.0,82.0,90.0,97.0,94.0
+Durango,general,16,98.0,82.0,93.0,86.0,94.0
+Durango,general,17,159.0,82.0,94.0,95.0,96.0
+Durango,general,18,78.0,83.0,91.0,92.0,98.0
+Durango,men,3,15.0,19.0,23.0,21.0,24.0
+Durango,men,4,25.0,20.0,24.0,24.0,25.0
+Durango,men,5,16.0,21.0,25.0,20.0,25.0
+Durango,men,6,44.0,21.0,31.0,19.0,24.0
+Durango,men,7,18.0,22.0,29.0,19.0,23.0
+Durango,men,8,15.0,22.0,21.0,21.0,24.0
+Durango,men,9,21.0,22.0,20.0,23.0,25.0
+Durango,men,10,33.0,22.0,29.0,21.0,25.0
+Durango,men,11,27.0,21.0,25.0,22.0,23.0
+Durango,men,12,24.0,21.0,28.0,20.0,22.0
+Durango,men,13,33.0,20.0,23.0,20.0,20.0
+Durango,men,14,15.0,19.0,25.0,16.0,21.0
+Durango,men,15,34.0,18.0,17.0,20.0,20.0
+Durango,men,16,25.0,18.0,24.0,18.0,20.0
+Durango,men,17,46.0,18.0,24.0,19.0,20.0
+Durango,men,18,27.0,19.0,27.0,17.0,21.0
+Durango,women,3,86.0,52.0,66.0,58.0,67.0
+Durango,women,4,54.0,55.0,36.0,69.0,73.0
+Durango,women,5,30.0,59.0,56.0,67.0,77.0
+Durango,women,6,103.0,62.0,65.0,63.0,76.0
+Durango,women,7,51.0,64.0,39.0,63.0,74.0
+Durango,women,8,43.0,65.0,47.0,62.0,74.0
+Durango,women,9,120.0,65.0,48.0,71.0,76.0
+Durango,women,10,91.0,65.0,52.0,65.0,78.0
+Durango,women,11,92.0,64.0,43.0,71.0,80.0
+Durango,women,12,78.0,64.0,79.0,72.0,79.0
+Durango,women,13,88.0,63.0,65.0,69.0,77.0
+Durango,women,14,56.0,63.0,51.0,79.0,75.0
+Durango,women,15,84.0,63.0,46.0,83.0,73.0
+Durango,women,16,73.0,64.0,34.0,65.0,74.0
+Durango,women,17,113.0,64.0,39.0,71.0,76.0
+Durango,women,18,70.0,65.0,42.0,70.0,78.0
+Guanajuato,general,3,79.0,93.0,77.0,118.0,113.0
+Guanajuato,general,4,127.0,105.0,126.0,134.0,119.0
+Guanajuato,general,5,98.0,118.0,100.0,140.0,126.0
+Guanajuato,general,6,65.0,131.0,96.0,136.0,129.0
+Guanajuato,general,7,125.0,142.0,111.0,131.0,127.0
+Guanajuato,general,8,92.0,150.0,99.0,134.0,133.0
+Guanajuato,general,9,102.0,154.0,103.0,145.0,146.0
+Guanajuato,general,10,118.0,155.0,111.0,154.0,151.0
+Guanajuato,general,11,97.0,154.0,100.0,152.0,150.0
+Guanajuato,general,12,90.0,151.0,110.0,142.0,135.0
+Guanajuato,general,13,105.0,147.0,116.0,135.0,120.0
+Guanajuato,general,14,70.0,143.0,113.0,137.0,125.0
+Guanajuato,general,15,97.0,140.0,107.0,145.0,124.0
+Guanajuato,general,16,102.0,137.0,86.0,150.0,133.0
+Guanajuato,general,17,135.0,135.0,110.0,147.0,140.0
+Guanajuato,general,18,100.0,134.0,101.0,141.0,130.0
+Guanajuato,men,3,18.0,21.0,18.0,23.0,25.0
+Guanajuato,men,4,18.0,23.0,23.0,23.0,25.0
+Guanajuato,men,5,22.0,25.0,19.0,24.0,25.0
+Guanajuato,men,6,16.0,27.0,37.0,23.0,27.0
+Guanajuato,men,7,29.0,29.0,29.0,23.0,26.0
+Guanajuato,men,8,27.0,31.0,19.0,24.0,28.0
+Guanajuato,men,9,15.0,33.0,23.0,24.0,30.0
+Guanajuato,men,10,25.0,33.0,22.0,26.0,32.0
+Guanajuato,men,11,25.0,34.0,19.0,25.0,32.0
+Guanajuato,men,12,15.0,33.0,24.0,27.0,31.0
+Guanajuato,men,13,19.0,32.0,20.0,25.0,27.0
+Guanajuato,men,14,15.0,31.0,30.0,26.0,27.0
+Guanajuato,men,15,16.0,29.0,22.0,25.0,23.0
+Guanajuato,men,16,14.0,28.0,20.0,26.0,26.0
+Guanajuato,men,17,29.0,28.0,15.0,25.0,25.0
+Guanajuato,men,18,22.0,28.0,28.0,24.0,25.0
+Guanajuato,women,3,61.0,79.0,65.0,93.0,88.0
+Guanajuato,women,4,109.0,87.0,106.0,106.0,93.0
+Guanajuato,women,5,76.0,95.0,83.0,112.0,100.0
+Guanajuato,women,6,49.0,104.0,61.0,109.0,100.0
+Guanajuato,women,7,96.0,110.0,73.0,104.0,99.0
+Guanajuato,women,8,65.0,115.0,100.0,106.0,104.0
+Guanajuato,women,9,87.0,117.0,88.0,115.0,114.0
+Guanajuato,women,10,93.0,117.0,79.0,122.0,117.0
+Guanajuato,women,11,72.0,115.0,88.0,121.0,117.0
+Guanajuato,women,12,75.0,114.0,109.0,112.0,104.0
+Guanajuato,women,13,86.0,112.0,99.0,105.0,93.0
+Guanajuato,women,14,56.0,110.0,95.0,107.0,98.0
+Guanajuato,women,15,81.0,109.0,73.0,115.0,99.0
+Guanajuato,women,16,88.0,108.0,75.0,120.0,105.0
+Guanajuato,women,17,106.0,107.0,86.0,118.0,111.0
+Guanajuato,women,18,78.0,107.0,102.0,112.0,102.0
+Guerrero,general,3,58.0,45.0,61.0,46.0,50.0
+Guerrero,general,4,48.0,51.0,61.0,47.0,53.0
+Guerrero,general,5,74.0,58.0,72.0,55.0,54.0
+Guerrero,general,6,53.0,65.0,78.0,50.0,57.0
+Guerrero,general,7,71.0,72.0,75.0,50.0,59.0
+Guerrero,general,8,64.0,76.0,80.0,50.0,66.0
+Guerrero,general,9,66.0,77.0,81.0,61.0,69.0
+Guerrero,general,10,50.0,76.0,89.0,59.0,65.0
+Guerrero,general,11,82.0,73.0,83.0,56.0,66.0
+Guerrero,general,12,52.0,70.0,69.0,52.0,63.0
+Guerrero,general,13,49.0,66.0,44.0,50.0,65.0
+Guerrero,general,14,69.0,64.0,39.0,50.0,60.0
+Guerrero,general,15,83.0,64.0,48.0,46.0,59.0
+Guerrero,general,16,54.0,64.0,40.0,49.0,59.0
+Guerrero,general,17,57.0,65.0,43.0,49.0,58.0
+Guerrero,general,18,25.0,67.0,35.0,49.0,58.0
+Guerrero,men,3,18.0,13.0,17.0,13.0,13.0
+Guerrero,men,4,19.0,14.0,20.0,15.0,14.0
+Guerrero,men,5,18.0,15.0,18.0,15.0,14.0
+Guerrero,men,6,19.0,16.0,22.0,15.0,14.0
+Guerrero,men,7,21.0,17.0,21.0,15.0,15.0
+Guerrero,men,8,10.0,18.0,19.0,16.0,16.0
+Guerrero,men,9,20.0,19.0,24.0,17.0,16.0
+Guerrero,men,10,9.0,19.0,21.0,18.0,16.0
+Guerrero,men,11,23.0,19.0,18.0,16.0,17.0
+Guerrero,men,12,14.0,18.0,17.0,16.0,16.0
+Guerrero,men,13,16.0,17.0,17.0,15.0,16.0
+Guerrero,men,14,27.0,16.0,16.0,16.0,14.0
+Guerrero,men,15,15.0,16.0,11.0,16.0,14.0
+Guerrero,men,16,13.0,16.0,10.0,15.0,13.0
+Guerrero,men,17,8.0,16.0,17.0,14.0,13.0
+Guerrero,men,18,8.0,16.0,17.0,14.0,13.0
+Guerrero,women,3,52.0,34.0,55.0,30.0,36.0
+Guerrero,women,4,45.0,38.0,56.0,31.0,38.0
+Guerrero,women,5,65.0,43.0,72.0,42.0,39.0
+Guerrero,women,6,49.0,48.0,84.0,37.0,42.0
+Guerrero,women,7,59.0,53.0,69.0,38.0,43.0
+Guerrero,women,8,60.0,56.0,66.0,38.0,49.0
+Guerrero,women,9,62.0,57.0,59.0,45.0,51.0
+Guerrero,women,10,44.0,56.0,89.0,43.0,47.0
+Guerrero,women,11,73.0,53.0,66.0,40.0,47.0
+Guerrero,women,12,43.0,51.0,58.0,38.0,47.0
+Guerrero,women,13,56.0,49.0,52.0,38.0,49.0
+Guerrero,women,14,75.0,47.0,54.0,37.0,43.0
+Guerrero,women,15,73.0,47.0,47.0,35.0,42.0
+Guerrero,women,16,43.0,48.0,44.0,36.0,43.0
+Guerrero,women,17,50.0,49.0,47.0,35.0,42.0
+Guerrero,women,18,23.0,50.0,48.0,35.0,43.0
+Hidalgo,general,3,52.0,46.0,52.0,53.0,55.0
+Hidalgo,general,4,86.0,54.0,84.0,64.0,64.0
+Hidalgo,general,5,52.0,62.0,71.0,71.0,67.0
+Hidalgo,general,6,66.0,71.0,80.0,69.0,65.0
+Hidalgo,general,7,83.0,77.0,72.0,65.0,64.0
+Hidalgo,general,8,102.0,79.0,69.0,64.0,65.0
+Hidalgo,general,9,93.0,78.0,78.0,66.0,65.0
+Hidalgo,general,10,53.0,76.0,62.0,67.0,66.0
+Hidalgo,general,11,94.0,72.0,58.0,68.0,65.0
+Hidalgo,general,12,57.0,69.0,74.0,66.0,65.0
+Hidalgo,general,13,67.0,68.0,86.0,63.0,63.0
+Hidalgo,general,14,61.0,68.0,62.0,62.0,62.0
+Hidalgo,general,15,61.0,69.0,73.0,62.0,62.0
+Hidalgo,general,16,82.0,71.0,53.0,64.0,65.0
+Hidalgo,general,17,80.0,72.0,61.0,65.0,67.0
+Hidalgo,general,18,58.0,74.0,71.0,66.0,66.0
+Hidalgo,men,3,14.0,9.0,13.0,7.0,8.0
+Hidalgo,men,4,19.0,10.0,15.0,10.0,9.0
+Hidalgo,men,5,22.0,11.0,15.0,11.0,9.0
+Hidalgo,men,6,10.0,11.0,16.0,11.0,10.0
+Hidalgo,men,7,15.0,12.0,19.0,10.0,9.0
+Hidalgo,men,8,16.0,12.0,15.0,10.0,10.0
+Hidalgo,men,9,10.0,13.0,16.0,10.0,10.0
+Hidalgo,men,10,12.0,12.0,11.0,11.0,10.0
+Hidalgo,men,11,25.0,12.0,14.0,10.0,9.0
+Hidalgo,men,12,13.0,12.0,14.0,10.0,9.0
+Hidalgo,men,13,12.0,12.0,14.0,9.0,9.0
+Hidalgo,men,14,12.0,11.0,13.0,9.0,9.0
+Hidalgo,men,15,13.0,11.0,11.0,9.0,9.0
+Hidalgo,men,16,17.0,11.0,9.0,10.0,10.0
+Hidalgo,men,17,17.0,11.0,9.0,10.0,10.0
+Hidalgo,men,18,11.0,11.0,15.0,10.0,9.0
+Hidalgo,women,3,38.0,40.0,37.0,45.0,47.0
+Hidalgo,women,4,67.0,45.0,62.0,50.0,54.0
+Hidalgo,women,5,30.0,51.0,57.0,54.0,56.0
+Hidalgo,women,6,56.0,57.0,58.0,52.0,53.0
+Hidalgo,women,7,69.0,61.0,57.0,50.0,54.0
+Hidalgo,women,8,86.0,63.0,59.0,51.0,54.0
+Hidalgo,women,9,83.0,62.0,56.0,51.0,54.0
+Hidalgo,women,10,41.0,60.0,46.0,52.0,55.0
+Hidalgo,women,11,69.0,58.0,54.0,52.0,54.0
+Hidalgo,women,12,44.0,56.0,64.0,51.0,55.0
+Hidalgo,women,13,55.0,55.0,50.0,49.0,54.0
+Hidalgo,women,14,49.0,55.0,69.0,49.0,53.0
+Hidalgo,women,15,48.0,56.0,45.0,49.0,53.0
+Hidalgo,women,16,65.0,58.0,49.0,50.0,54.0
+Hidalgo,women,17,63.0,60.0,53.0,50.0,57.0
+Hidalgo,women,18,47.0,61.0,54.0,51.0,57.0
+Jalisco,general,3,251.0,162.0,238.0,205.0,175.0
+Jalisco,general,4,206.0,170.0,264.0,224.0,188.0
+Jalisco,general,5,224.0,180.0,191.0,225.0,187.0
+Jalisco,general,6,231.0,189.0,203.0,214.0,187.0
+Jalisco,general,7,239.0,196.0,150.0,214.0,185.0
+Jalisco,general,8,225.0,201.0,218.0,203.0,209.0
+Jalisco,general,9,198.0,204.0,237.0,211.0,216.0
+Jalisco,general,10,225.0,205.0,306.0,213.0,217.0
+Jalisco,general,11,191.0,205.0,225.0,212.0,213.0
+Jalisco,general,12,185.0,205.0,237.0,217.0,202.0
+Jalisco,general,13,207.0,205.0,196.0,222.0,174.0
+Jalisco,general,14,159.0,205.0,163.0,205.0,175.0
+Jalisco,general,15,223.0,206.0,157.0,223.0,162.0
+Jalisco,general,16,221.0,207.0,143.0,215.0,178.0
+Jalisco,general,17,235.0,208.0,189.0,230.0,180.0
+Jalisco,general,18,226.0,210.0,157.0,219.0,178.0
+Jalisco,men,3,87.0,59.0,40.0,53.0,56.0
+Jalisco,men,4,50.0,61.0,87.0,60.0,61.0
+Jalisco,men,5,91.0,63.0,104.0,55.0,61.0
+Jalisco,men,6,77.0,65.0,73.0,56.0,61.0
+Jalisco,men,7,79.0,65.0,56.0,54.0,59.0
+Jalisco,men,8,58.0,66.0,63.0,53.0,64.0
+Jalisco,men,9,59.0,66.0,72.0,58.0,69.0
+Jalisco,men,10,80.0,66.0,76.0,57.0,71.0
+Jalisco,men,11,56.0,67.0,80.0,58.0,69.0
+Jalisco,men,12,66.0,67.0,82.0,58.0,68.0
+Jalisco,men,13,88.0,67.0,66.0,57.0,58.0
+Jalisco,men,14,55.0,68.0,68.0,55.0,61.0
+Jalisco,men,15,108.0,68.0,83.0,57.0,55.0
+Jalisco,men,16,79.0,68.0,82.0,59.0,59.0
+Jalisco,men,17,88.0,68.0,82.0,60.0,56.0
+Jalisco,men,18,75.0,68.0,76.0,57.0,59.0
+Jalisco,women,3,178.0,113.0,156.0,147.0,116.0
+Jalisco,women,4,166.0,118.0,162.0,156.0,131.0
+Jalisco,women,5,143.0,125.0,151.0,161.0,133.0
+Jalisco,women,6,161.0,133.0,111.0,161.0,129.0
+Jalisco,women,7,168.0,139.0,72.0,161.0,126.0
+Jalisco,women,8,167.0,144.0,149.0,156.0,141.0
+Jalisco,women,9,149.0,146.0,146.0,162.0,150.0
+Jalisco,women,10,146.0,147.0,194.0,158.0,153.0
+Jalisco,women,11,135.0,147.0,172.0,155.0,150.0
+Jalisco,women,12,136.0,146.0,171.0,164.0,138.0
+Jalisco,women,13,161.0,145.0,128.0,160.0,123.0
+Jalisco,women,14,104.0,143.0,128.0,146.0,123.0
+Jalisco,women,15,119.0,142.0,147.0,154.0,124.0
+Jalisco,women,16,148.0,142.0,175.0,153.0,132.0
+Jalisco,women,17,148.0,143.0,139.0,162.0,133.0
+Jalisco,women,18,155.0,145.0,136.0,157.0,128.0
+Michoacán,general,3,104.0,103.0,100.0,134.0,175.0
+Michoacán,general,4,103.0,115.0,108.0,148.0,193.0
+Michoacán,general,5,106.0,129.0,121.0,152.0,199.0
+Michoacán,general,6,93.0,140.0,98.0,149.0,199.0
+Michoacán,general,7,108.0,148.0,108.0,146.0,196.0
+Michoacán,general,8,69.0,152.0,122.0,147.0,200.0
+Michoacán,general,9,36.0,153.0,114.0,151.0,206.0
+Michoacán,general,10,64.0,152.0,111.0,155.0,211.0
+Michoacán,general,11,67.0,152.0,109.0,157.0,212.0
+Michoacán,general,12,42.0,154.0,133.0,158.0,215.0
+Michoacán,general,13,62.0,156.0,106.0,159.0,213.0
+Michoacán,general,14,69.0,159.0,104.0,160.0,213.0
+Michoacán,general,15,95.0,161.0,124.0,158.0,215.0
+Michoacán,general,16,128.0,161.0,105.0,158.0,215.0
+Michoacán,general,17,76.0,160.0,113.0,159.0,216.0
+Michoacán,general,18,137.0,158.0,117.0,163.0,222.0
+Michoacán,men,3,33.0,29.0,29.0,36.0,51.0
+Michoacán,men,4,28.0,31.0,24.0,41.0,57.0
+Michoacán,men,5,27.0,33.0,27.0,42.0,57.0
+Michoacán,men,6,29.0,35.0,24.0,40.0,54.0
+Michoacán,men,7,30.0,36.0,19.0,39.0,54.0
+Michoacán,men,8,16.0,37.0,22.0,40.0,55.0
+Michoacán,men,9,11.0,37.0,20.0,42.0,57.0
+Michoacán,men,10,29.0,37.0,25.0,44.0,59.0
+Michoacán,men,11,21.0,37.0,25.0,43.0,60.0
+Michoacán,men,12,16.0,37.0,22.0,43.0,58.0
+Michoacán,men,13,21.0,37.0,19.0,43.0,58.0
+Michoacán,men,14,23.0,37.0,18.0,44.0,61.0
+Michoacán,men,15,74.0,38.0,25.0,44.0,59.0
+Michoacán,men,16,59.0,37.0,18.0,42.0,58.0
+Michoacán,men,17,38.0,37.0,20.0,41.0,56.0
+Michoacán,men,18,48.0,36.0,20.0,42.0,57.0
+Michoacán,women,3,78.0,74.0,73.0,100.0,118.0
+Michoacán,women,4,77.0,83.0,90.0,111.0,126.0
+Michoacán,women,5,87.0,92.0,85.0,116.0,130.0
+Michoacán,women,6,67.0,99.0,82.0,116.0,134.0
+Michoacán,women,7,78.0,104.0,67.0,114.0,132.0
+Michoacán,women,8,55.0,107.0,83.0,114.0,136.0
+Michoacán,women,9,29.0,107.0,94.0,116.0,138.0
+Michoacán,women,10,67.0,107.0,90.0,119.0,141.0
+Michoacán,women,11,56.0,108.0,69.0,122.0,143.0
+Michoacán,women,12,34.0,109.0,74.0,123.0,144.0
+Michoacán,women,13,53.0,112.0,71.0,123.0,142.0
+Michoacán,women,14,64.0,114.0,99.0,122.0,141.0
+Michoacán,women,15,159.0,116.0,69.0,121.0,143.0
+Michoacán,women,16,147.0,116.0,69.0,122.0,145.0
+Michoacán,women,17,95.0,115.0,68.0,126.0,148.0
+Michoacán,women,18,124.0,114.0,64.0,129.0,151.0
+Morelos,general,3,57.0,52.0,59.0,56.0,56.0
+Morelos,general,4,67.0,56.0,67.0,65.0,62.0
+Morelos,general,5,58.0,60.0,67.0,70.0,69.0
+Morelos,general,6,52.0,65.0,54.0,69.0,69.0
+Morelos,general,7,74.0,69.0,64.0,65.0,67.0
+Morelos,general,8,48.0,71.0,61.0,66.0,70.0
+Morelos,general,9,75.0,73.0,78.0,73.0,76.0
+Morelos,general,10,73.0,74.0,76.0,81.0,85.0
+Morelos,general,11,60.0,74.0,79.0,83.0,85.0
+Morelos,general,12,50.0,74.0,80.0,78.0,78.0
+Morelos,general,13,66.0,73.0,65.0,71.0,72.0
+Morelos,general,14,53.0,72.0,65.0,70.0,70.0
+Morelos,general,15,79.0,71.0,73.0,74.0,68.0
+Morelos,general,16,53.0,70.0,67.0,78.0,65.0
+Morelos,general,17,79.0,69.0,66.0,76.0,67.0
+Morelos,general,18,42.0,68.0,64.0,71.0,63.0
+Morelos,men,3,16.0,13.0,22.0,12.0,12.0
+Morelos,men,4,10.0,13.0,14.0,14.0,13.0
+Morelos,men,5,10.0,14.0,16.0,15.0,14.0
+Morelos,men,6,14.0,14.0,19.0,15.0,14.0
+Morelos,men,7,20.0,14.0,12.0,13.0,13.0
+Morelos,men,8,10.0,15.0,7.0,13.0,13.0
+Morelos,men,9,16.0,16.0,13.0,15.0,14.0
+Morelos,men,10,18.0,16.0,18.0,17.0,16.0
+Morelos,men,11,15.0,17.0,12.0,18.0,17.0
+Morelos,men,12,12.0,17.0,20.0,17.0,17.0
+Morelos,men,13,16.0,17.0,16.0,16.0,15.0
+Morelos,men,14,7.0,17.0,18.0,15.0,14.0
+Morelos,men,15,17.0,16.0,9.0,15.0,14.0
+Morelos,men,16,13.0,15.0,13.0,16.0,14.0
+Morelos,men,17,23.0,15.0,11.0,15.0,13.0
+Morelos,men,18,16.0,14.0,18.0,14.0,13.0
+Morelos,women,3,41.0,40.0,42.0,42.0,43.0
+Morelos,women,4,57.0,44.0,57.0,48.0,48.0
+Morelos,women,5,56.0,47.0,56.0,52.0,53.0
+Morelos,women,6,38.0,51.0,47.0,51.0,53.0
+Morelos,women,7,54.0,54.0,51.0,50.0,52.0
+Morelos,women,8,38.0,56.0,42.0,49.0,57.0
+Morelos,women,9,59.0,57.0,55.0,53.0,62.0
+Morelos,women,10,55.0,57.0,59.0,56.0,67.0
+Morelos,women,11,47.0,57.0,54.0,57.0,67.0
+Morelos,women,12,38.0,56.0,55.0,54.0,60.0
+Morelos,women,13,50.0,56.0,59.0,50.0,55.0
+Morelos,women,14,46.0,55.0,55.0,50.0,55.0
+Morelos,women,15,62.0,55.0,62.0,52.0,52.0
+Morelos,women,16,40.0,54.0,52.0,57.0,48.0
+Morelos,women,17,56.0,54.0,45.0,56.0,52.0
+Morelos,women,18,30.0,53.0,76.0,52.0,48.0
+México,general,3,209.0,178.0,199.0,194.0,118.0
+México,general,4,179.0,192.0,182.0,213.0,133.0
+México,general,5,179.0,208.0,233.0,219.0,141.0
+México,general,6,167.0,223.0,245.0,216.0,139.0
+México,general,7,176.0,234.0,182.0,216.0,134.0
+México,general,8,203.0,240.0,276.0,211.0,142.0
+México,general,9,241.0,242.0,203.0,209.0,140.0
+México,general,10,212.0,240.0,193.0,201.0,137.0
+México,general,11,224.0,237.0,224.0,214.0,155.0
+México,general,12,206.0,235.0,175.0,217.0,137.0
+México,general,13,217.0,234.0,166.0,208.0,130.0
+México,general,14,158.0,235.0,212.0,207.0,137.0
+México,general,15,202.0,237.0,198.0,211.0,138.0
+México,general,16,268.0,239.0,190.0,232.0,141.0
+México,general,17,231.0,240.0,137.0,220.0,149.0
+México,general,18,209.0,241.0,208.0,201.0,149.0
+México,men,3,55.0,47.0,47.0,19.0,36.0
+México,men,4,39.0,50.0,63.0,27.0,38.0
+México,men,5,58.0,55.0,67.0,31.0,40.0
+México,men,6,37.0,59.0,55.0,31.0,41.0
+México,men,7,37.0,63.0,68.0,30.0,40.0
+México,men,8,58.0,65.0,44.0,30.0,44.0
+México,men,9,53.0,65.0,72.0,32.0,42.0
+México,men,10,39.0,65.0,50.0,33.0,38.0
+México,men,11,59.0,63.0,57.0,32.0,45.0
+México,men,12,56.0,61.0,61.0,29.0,38.0
+México,men,13,56.0,59.0,48.0,27.0,39.0
+México,men,14,48.0,58.0,55.0,29.0,41.0
+México,men,15,44.0,58.0,67.0,31.0,37.0
+México,men,16,60.0,59.0,67.0,31.0,38.0
+México,men,17,57.0,60.0,67.0,30.0,41.0
+México,men,18,65.0,61.0,71.0,29.0,41.0
+México,women,3,167.0,142.0,103.0,122.0,111.0
+México,women,4,140.0,151.0,96.0,151.0,118.0
+México,women,5,137.0,162.0,154.0,157.0,121.0
+México,women,6,131.0,172.0,159.0,177.0,116.0
+México,women,7,153.0,179.0,140.0,177.0,119.0
+México,women,8,156.0,183.0,138.0,175.0,126.0
+México,women,9,190.0,184.0,154.0,174.0,121.0
+México,women,10,176.0,184.0,151.0,168.0,123.0
+México,women,11,166.0,183.0,138.0,171.0,137.0
+México,women,12,151.0,183.0,139.0,186.0,120.0
+México,women,13,161.0,183.0,109.0,180.0,117.0
+México,women,14,121.0,185.0,125.0,193.0,125.0
+México,women,15,159.0,186.0,80.0,185.0,122.0
+México,women,16,208.0,188.0,45.0,216.0,124.0
+México,women,17,175.0,188.0,55.0,195.0,132.0
+México,women,18,170.0,187.0,34.0,200.0,132.0
+Nacional,general,3,2819.0,2385.0,2397.0,2511.0,2246.0
+Nacional,general,4,2820.0,2570.0,3034.0,2869.0,2467.0
+Nacional,general,5,2595.0,2778.0,3104.0,3044.0,2551.0
+Nacional,general,6,2585.0,2973.0,3083.0,2973.0,2382.0
+Nacional,general,7,2975.0,3121.0,2957.0,2886.0,2353.0
+Nacional,general,8,3041.0,3203.0,3131.0,2906.0,2645.0
+Nacional,general,9,3086.0,3221.0,3322.0,3046.0,2706.0
+Nacional,general,10,3057.0,3192.0,3407.0,3167.0,2558.0
+Nacional,general,11,3052.0,3143.0,3345.0,3132.0,2613.0
+Nacional,general,12,2574.0,3096.0,3305.0,3004.0,2488.0
+Nacional,general,13,3223.0,3066.0,3091.0,2891.0,2198.0
+Nacional,general,14,2341.0,3057.0,2897.0,2897.0,2209.0
+Nacional,general,15,2981.0,3065.0,2699.0,2961.0,2289.0
+Nacional,general,16,3065.0,3083.0,2706.0,3093.0,2425.0
+Nacional,general,17,3075.0,3104.0,2823.0,3048.0,2514.0
+Nacional,general,18,2791.0,3126.0,2855.0,3032.0,2426.0
+Nacional,men,3,798.0,667.0,698.0,700.0,493.0
+Nacional,men,4,775.0,716.0,804.0,763.0,534.0
+Nacional,men,5,763.0,771.0,824.0,778.0,560.0
+Nacional,men,6,790.0,821.0,820.0,765.0,540.0
+Nacional,men,7,818.0,859.0,838.0,753.0,514.0
+Nacional,men,8,804.0,879.0,837.0,749.0,572.0
+Nacional,men,9,820.0,883.0,850.0,769.0,586.0
+Nacional,men,10,866.0,873.0,859.0,781.0,556.0
+Nacional,men,11,873.0,857.0,863.0,776.0,578.0
+Nacional,men,12,735.0,840.0,855.0,761.0,543.0
+Nacional,men,13,898.0,826.0,833.0,743.0,475.0
+Nacional,men,14,686.0,818.0,811.0,739.0,483.0
+Nacional,men,15,875.0,815.0,802.0,730.0,487.0
+Nacional,men,16,932.0,817.0,785.0,771.0,515.0
+Nacional,men,17,899.0,821.0,783.0,757.0,514.0
+Nacional,men,18,838.0,828.0,775.0,778.0,490.0
+Nacional,women,3,2095.0,1731.0,1624.0,1808.0,1878.0
+Nacional,women,4,2165.0,1872.0,2087.0,2101.0,2075.0
+Nacional,women,5,1923.0,2029.0,2195.0,2252.0,2134.0
+Nacional,women,6,1919.0,2176.0,2264.0,2210.0,2003.0
+Nacional,women,7,2219.0,2286.0,2265.0,2138.0,1996.0
+Nacional,women,8,2311.0,2348.0,2472.0,2162.0,2229.0
+Nacional,women,9,2313.0,2362.0,2507.0,2290.0,2279.0
+Nacional,women,10,2309.0,2343.0,2437.0,2384.0,2167.0
+Nacional,women,11,2290.0,2309.0,2478.0,2361.0,2204.0
+Nacional,women,12,1970.0,2277.0,2477.0,2248.0,2121.0
+Nacional,women,13,2465.0,2257.0,2380.0,2158.0,1883.0
+Nacional,women,14,1781.0,2253.0,2264.0,2165.0,1884.0
+Nacional,women,15,2330.0,2261.0,2094.0,2248.0,1976.0
+Nacional,women,16,2544.0,2275.0,2099.0,2322.0,2088.0
+Nacional,women,17,2372.0,2290.0,2173.0,2322.0,2179.0
+Nacional,women,18,2190.0,2304.0,2215.0,2276.0,2123.0
+Nayarit,general,3,62.0,60.0,84.0,60.0,48.0
+Nayarit,general,4,41.0,66.0,64.0,60.0,59.0
+Nayarit,general,5,43.0,75.0,69.0,63.0,62.0
+Nayarit,general,6,40.0,85.0,72.0,62.0,60.0
+Nayarit,general,7,68.0,93.0,75.0,59.0,61.0
+Nayarit,general,8,53.0,97.0,68.0,57.0,56.0
+Nayarit,general,9,80.0,96.0,62.0,57.0,58.0
+Nayarit,general,10,92.0,91.0,50.0,58.0,58.0
+Nayarit,general,11,101.0,84.0,87.0,53.0,57.0
+Nayarit,general,12,93.0,78.0,68.0,52.0,51.0
+Nayarit,general,13,77.0,74.0,85.0,49.0,46.0
+Nayarit,general,14,66.0,72.0,42.0,48.0,44.0
+Nayarit,general,15,130.0,71.0,86.0,49.0,46.0
+Nayarit,general,16,72.0,73.0,59.0,49.0,45.0
+Nayarit,general,17,97.0,75.0,74.0,50.0,45.0
+Nayarit,general,18,101.0,76.0,70.0,50.0,46.0
+Nayarit,men,3,21.0,20.0,20.0,23.0,21.0
+Nayarit,men,4,16.0,22.0,14.0,22.0,23.0
+Nayarit,men,5,15.0,23.0,16.0,21.0,25.0
+Nayarit,men,6,14.0,26.0,12.0,22.0,25.0
+Nayarit,men,7,21.0,28.0,15.0,22.0,26.0
+Nayarit,men,8,15.0,29.0,24.0,20.0,25.0
+Nayarit,men,9,29.0,29.0,18.0,20.0,24.0
+Nayarit,men,10,34.0,28.0,23.0,19.0,24.0
+Nayarit,men,11,34.0,27.0,13.0,20.0,23.0
+Nayarit,men,12,37.0,26.0,25.0,18.0,23.0
+Nayarit,men,13,20.0,24.0,25.0,17.0,22.0
+Nayarit,men,14,19.0,24.0,17.0,17.0,21.0
+Nayarit,men,15,42.0,23.0,30.0,17.0,21.0
+Nayarit,men,16,24.0,24.0,29.0,17.0,21.0
+Nayarit,men,17,30.0,24.0,26.0,17.0,22.0
+Nayarit,men,18,27.0,25.0,21.0,18.0,22.0
+Nayarit,women,3,41.0,42.0,44.0,33.0,29.0
+Nayarit,women,4,25.0,46.0,37.0,39.0,38.0
+Nayarit,women,5,28.0,52.0,34.0,42.0,41.0
+Nayarit,women,6,26.0,58.0,46.0,41.0,39.0
+Nayarit,women,7,47.0,63.0,39.0,39.0,38.0
+Nayarit,women,8,38.0,66.0,46.0,36.0,36.0
+Nayarit,women,9,51.0,65.0,53.0,36.0,38.0
+Nayarit,women,10,58.0,61.0,43.0,37.0,38.0
+Nayarit,women,11,67.0,57.0,46.0,36.0,37.0
+Nayarit,women,12,56.0,53.0,43.0,33.0,32.0
+Nayarit,women,13,57.0,51.0,43.0,29.0,29.0
+Nayarit,women,14,47.0,49.0,53.0,28.0,28.0
+Nayarit,women,15,88.0,49.0,58.0,29.0,28.0
+Nayarit,women,16,48.0,50.0,54.0,29.0,28.0
+Nayarit,women,17,67.0,51.0,65.0,29.0,28.0
+Nayarit,women,18,74.0,52.0,70.0,29.0,28.0
+Nuevo León,general,3,76.0,91.0,107.0,85.0,100.0
+Nuevo León,general,4,100.0,98.0,121.0,99.0,115.0
+Nuevo León,general,5,96.0,106.0,135.0,108.0,120.0
+Nuevo León,general,6,75.0,113.0,98.0,108.0,116.0
+Nuevo León,general,7,99.0,119.0,104.0,104.0,111.0
+Nuevo León,general,8,87.0,122.0,126.0,103.0,110.0
+Nuevo León,general,9,107.0,124.0,86.0,110.0,116.0
+Nuevo León,general,10,74.0,124.0,135.0,113.0,122.0
+Nuevo León,general,11,67.0,123.0,115.0,109.0,122.0
+Nuevo León,general,12,52.0,122.0,99.0,109.0,116.0
+Nuevo León,general,13,70.0,121.0,61.0,108.0,112.0
+Nuevo León,general,14,107.0,120.0,111.0,106.0,114.0
+Nuevo León,general,15,63.0,120.0,67.0,112.0,116.0
+Nuevo León,general,16,77.0,122.0,58.0,119.0,119.0
+Nuevo León,general,17,98.0,124.0,59.0,114.0,118.0
+Nuevo León,general,18,84.0,127.0,60.0,108.0,116.0
+Nuevo León,men,3,26.0,28.0,28.0,26.0,28.0
+Nuevo León,men,4,49.0,30.0,33.0,29.0,33.0
+Nuevo León,men,5,21.0,32.0,26.0,31.0,35.0
+Nuevo León,men,6,20.0,33.0,27.0,30.0,34.0
+Nuevo León,men,7,32.0,35.0,28.0,29.0,32.0
+Nuevo León,men,8,24.0,35.0,29.0,31.0,32.0
+Nuevo León,men,9,35.0,35.0,24.0,32.0,33.0
+Nuevo León,men,10,25.0,34.0,33.0,32.0,33.0
+Nuevo León,men,11,24.0,33.0,28.0,29.0,32.0
+Nuevo León,men,12,14.0,33.0,17.0,30.0,30.0
+Nuevo León,men,13,20.0,32.0,32.0,30.0,30.0
+Nuevo León,men,14,24.0,32.0,22.0,31.0,31.0
+Nuevo León,men,15,29.0,33.0,16.0,35.0,33.0
+Nuevo León,men,16,24.0,33.0,26.0,34.0,33.0
+Nuevo León,men,17,24.0,33.0,31.0,31.0,32.0
+Nuevo León,men,18,34.0,34.0,20.0,28.0,31.0
+Nuevo León,women,3,52.0,66.0,68.0,70.0,74.0
+Nuevo León,women,4,89.0,71.0,73.0,80.0,86.0
+Nuevo León,women,5,87.0,75.0,79.0,85.0,85.0
+Nuevo León,women,6,55.0,79.0,63.0,82.0,79.0
+Nuevo León,women,7,67.0,83.0,50.0,78.0,83.0
+Nuevo León,women,8,63.0,85.0,65.0,78.0,82.0
+Nuevo León,women,9,72.0,87.0,57.0,84.0,87.0
+Nuevo León,women,10,49.0,88.0,60.0,90.0,94.0
+Nuevo León,women,11,47.0,88.0,60.0,90.0,95.0
+Nuevo León,women,12,46.0,88.0,31.0,88.0,83.0
+Nuevo León,women,13,63.0,88.0,30.0,84.0,84.0
+Nuevo León,women,14,88.0,88.0,47.0,83.0,91.0
+Nuevo León,women,15,70.0,88.0,52.0,86.0,84.0
+Nuevo León,women,16,63.0,89.0,33.0,89.0,83.0
+Nuevo León,women,17,82.0,90.0,35.0,89.0,89.0
+Nuevo León,women,18,65.0,92.0,33.0,89.0,86.0
+Oaxaca,general,3,65.0,34.0,53.0,36.0,33.0
+Oaxaca,general,4,83.0,38.0,60.0,42.0,40.0
+Oaxaca,general,5,48.0,43.0,51.0,47.0,43.0
+Oaxaca,general,6,59.0,48.0,69.0,43.0,44.0
+Oaxaca,general,7,64.0,53.0,53.0,43.0,44.0
+Oaxaca,general,8,64.0,56.0,55.0,44.0,46.0
+Oaxaca,general,9,73.0,57.0,60.0,46.0,49.0
+Oaxaca,general,10,45.0,56.0,64.0,47.0,50.0
+Oaxaca,general,11,50.0,55.0,47.0,46.0,50.0
+Oaxaca,general,12,67.0,52.0,53.0,44.0,49.0
+Oaxaca,general,13,75.0,50.0,73.0,42.0,46.0
+Oaxaca,general,14,41.0,48.0,62.0,43.0,44.0
+Oaxaca,general,15,57.0,47.0,72.0,47.0,44.0
+Oaxaca,general,16,57.0,45.0,43.0,42.0,43.0
+Oaxaca,general,17,67.0,45.0,56.0,45.0,43.0
+Oaxaca,general,18,72.0,44.0,59.0,45.0,42.0
+Oaxaca,men,3,27.0,13.0,26.0,10.0,11.0
+Oaxaca,men,4,30.0,14.0,33.0,13.0,14.0
+Oaxaca,men,5,20.0,15.0,20.0,3.0,13.0
+Oaxaca,men,6,25.0,16.0,20.0,12.0,14.0
+Oaxaca,men,7,19.0,17.0,29.0,12.0,14.0
+Oaxaca,men,8,32.0,18.0,42.0,12.0,17.0
+Oaxaca,men,9,35.0,18.0,39.0,12.0,18.0
+Oaxaca,men,10,22.0,18.0,19.0,12.0,17.0
+Oaxaca,men,11,28.0,18.0,21.0,12.0,17.0
+Oaxaca,men,12,36.0,18.0,19.0,12.0,17.0
+Oaxaca,men,13,33.0,18.0,24.0,13.0,16.0
+Oaxaca,men,14,14.0,17.0,35.0,11.0,16.0
+Oaxaca,men,15,28.0,17.0,23.0,12.0,16.0
+Oaxaca,men,16,32.0,16.0,29.0,11.0,15.0
+Oaxaca,men,17,28.0,16.0,18.0,12.0,15.0
+Oaxaca,men,18,41.0,16.0,29.0,12.0,15.0
+Oaxaca,women,3,38.0,23.0,31.0,27.0,21.0
+Oaxaca,women,4,53.0,26.0,43.0,31.0,26.0
+Oaxaca,women,5,29.0,29.0,33.0,33.0,28.0
+Oaxaca,women,6,35.0,32.0,32.0,34.0,29.0
+Oaxaca,women,7,46.0,35.0,34.0,34.0,28.0
+Oaxaca,women,8,33.0,37.0,36.0,34.0,30.0
+Oaxaca,women,9,42.0,38.0,41.0,34.0,32.0
+Oaxaca,women,10,26.0,37.0,40.0,36.0,32.0
+Oaxaca,women,11,33.0,36.0,45.0,35.0,32.0
+Oaxaca,women,12,43.0,34.0,34.0,32.0,31.0
+Oaxaca,women,13,48.0,33.0,32.0,33.0,30.0
+Oaxaca,women,14,27.0,31.0,37.0,30.0,28.0
+Oaxaca,women,15,30.0,30.0,29.0,32.0,27.0
+Oaxaca,women,16,34.0,30.0,11.0,29.0,27.0
+Oaxaca,women,17,39.0,29.0,11.0,33.0,28.0
+Oaxaca,women,18,39.0,29.0,14.0,30.0,27.0
+Puebla,general,3,59.0,71.0,75.0,84.0,91.0
+Puebla,general,4,56.0,74.0,66.0,93.0,101.0
+Puebla,general,5,45.0,77.0,54.0,94.0,102.0
+Puebla,general,6,74.0,81.0,104.0,93.0,101.0
+Puebla,general,7,66.0,84.0,64.0,95.0,103.0
+Puebla,general,8,76.0,85.0,99.0,100.0,107.0
+Puebla,general,9,50.0,85.0,101.0,101.0,108.0
+Puebla,general,10,61.0,83.0,93.0,98.0,104.0
+Puebla,general,11,56.0,81.0,68.0,92.0,98.0
+Puebla,general,12,44.0,79.0,104.0,90.0,95.0
+Puebla,general,13,54.0,78.0,127.0,91.0,96.0
+Puebla,general,14,41.0,79.0,81.0,94.0,99.0
+Puebla,general,15,42.0,81.0,108.0,98.0,103.0
+Puebla,general,16,67.0,84.0,96.0,103.0,107.0
+Puebla,general,17,52.0,87.0,101.0,106.0,110.0
+Puebla,general,18,64.0,89.0,83.0,106.0,110.0
+Puebla,men,3,24.0,23.0,43.0,30.0,24.0
+Puebla,men,4,19.0,23.0,29.0,25.0,27.0
+Puebla,men,5,16.0,24.0,23.0,28.0,26.0
+Puebla,men,6,27.0,24.0,24.0,26.0,25.0
+Puebla,men,7,20.0,25.0,22.0,27.0,25.0
+Puebla,men,8,20.0,25.0,21.0,30.0,27.0
+Puebla,men,9,18.0,25.0,26.0,29.0,28.0
+Puebla,men,10,25.0,24.0,33.0,29.0,27.0
+Puebla,men,11,15.0,24.0,35.0,28.0,25.0
+Puebla,men,12,13.0,24.0,48.0,27.0,24.0
+Puebla,men,13,15.0,24.0,47.0,24.0,25.0
+Puebla,men,14,10.0,24.0,45.0,25.0,26.0
+Puebla,men,15,18.0,24.0,40.0,25.0,27.0
+Puebla,men,16,26.0,25.0,21.0,26.0,27.0
+Puebla,men,17,7.0,26.0,18.0,30.0,28.0
+Puebla,men,18,20.0,26.0,21.0,27.0,28.0
+Puebla,women,3,35.0,49.0,65.0,57.0,65.0
+Puebla,women,4,38.0,51.0,54.0,63.0,72.0
+Puebla,women,5,31.0,54.0,41.0,65.0,74.0
+Puebla,women,6,48.0,57.0,39.0,66.0,74.0
+Puebla,women,7,50.0,59.0,51.0,67.0,76.0
+Puebla,women,8,60.0,60.0,71.0,69.0,78.0
+Puebla,women,9,37.0,60.0,72.0,70.0,78.0
+Puebla,women,10,56.0,59.0,69.0,68.0,75.0
+Puebla,women,11,41.0,57.0,58.0,65.0,72.0
+Puebla,women,12,31.0,56.0,72.0,63.0,69.0
+Puebla,women,13,41.0,56.0,75.0,63.0,69.0
+Puebla,women,14,32.0,56.0,77.0,65.0,71.0
+Puebla,women,15,24.0,58.0,87.0,69.0,75.0
+Puebla,women,16,71.0,60.0,93.0,73.0,78.0
+Puebla,women,17,13.0,61.0,95.0,75.0,80.0
+Puebla,women,18,50.0,63.0,93.0,74.0,80.0
+Querétaro,general,3,32.0,21.0,29.0,22.0,28.0
+Querétaro,general,4,22.0,22.0,30.0,22.0,30.0
+Querétaro,general,5,18.0,23.0,23.0,21.0,31.0
+Querétaro,general,6,22.0,24.0,25.0,21.0,31.0
+Querétaro,general,7,27.0,25.0,24.0,21.0,31.0
+Querétaro,general,8,20.0,25.0,24.0,21.0,32.0
+Querétaro,general,9,29.0,25.0,15.0,22.0,33.0
+Querétaro,general,10,30.0,24.0,30.0,20.0,33.0
+Querétaro,general,11,37.0,24.0,18.0,20.0,31.0
+Querétaro,general,12,28.0,23.0,14.0,21.0,28.0
+Querétaro,general,13,31.0,22.0,20.0,20.0,25.0
+Querétaro,general,14,14.0,22.0,23.0,20.0,25.0
+Querétaro,general,15,33.0,23.0,23.0,20.0,27.0
+Querétaro,general,16,26.0,23.0,19.0,19.0,30.0
+Querétaro,general,17,29.0,24.0,24.0,22.0,32.0
+Querétaro,general,18,19.0,26.0,25.0,22.0,32.0
+Querétaro,men,3,10.0,5.0,5.0,4.0,5.0
+Querétaro,men,4,9.0,5.0,5.0,4.0,5.0
+Querétaro,men,5,5.0,5.0,5.0,4.0,6.0
+Querétaro,men,6,5.0,5.0,4.0,4.0,5.0
+Querétaro,men,7,7.0,5.0,3.0,4.0,6.0
+Querétaro,men,8,2.0,6.0,5.0,4.0,5.0
+Querétaro,men,9,6.0,6.0,5.0,4.0,6.0
+Querétaro,men,10,7.0,6.0,6.0,4.0,6.0
+Querétaro,men,11,12.0,6.0,10.0,4.0,6.0
+Querétaro,men,12,8.0,6.0,6.0,4.0,6.0
+Querétaro,men,13,7.0,5.0,3.0,4.0,5.0
+Querétaro,men,14,6.0,5.0,5.0,5.0,5.0
+Querétaro,men,15,4.0,5.0,5.0,5.0,5.0
+Querétaro,men,16,8.0,5.0,5.0,4.0,5.0
+Querétaro,men,17,6.0,5.0,8.0,5.0,6.0
+Querétaro,men,18,0.0,5.0,2.0,5.0,6.0
+Querétaro,women,3,21.0,17.0,17.0,16.0,22.0
+Querétaro,women,4,14.0,17.0,16.0,16.0,23.0
+Querétaro,women,5,14.0,18.0,14.0,17.0,23.0
+Querétaro,women,6,18.0,19.0,18.0,16.0,24.0
+Querétaro,women,7,16.0,19.0,15.0,16.0,24.0
+Querétaro,women,8,21.0,19.0,20.0,17.0,25.0
+Querétaro,women,9,21.0,19.0,9.0,17.0,25.0
+Querétaro,women,10,20.0,19.0,18.0,14.0,25.0
+Querétaro,women,11,28.0,18.0,16.0,16.0,24.0
+Querétaro,women,12,20.0,17.0,12.0,17.0,21.0
+Querétaro,women,13,18.0,17.0,17.0,18.0,19.0
+Querétaro,women,14,18.0,17.0,18.0,17.0,19.0
+Querétaro,women,15,27.0,18.0,15.0,15.0,22.0
+Querétaro,women,16,16.0,18.0,10.0,14.0,23.0
+Querétaro,women,17,27.0,19.0,18.0,17.0,24.0
+Querétaro,women,18,12.0,20.0,19.0,18.0,24.0
+Quintana Roo,general,3,29.0,30.0,31.0,31.0,33.0
+Quintana Roo,general,4,30.0,33.0,32.0,36.0,38.0
+Quintana Roo,general,5,23.0,36.0,29.0,37.0,39.0
+Quintana Roo,general,6,57.0,39.0,28.0,34.0,36.0
+Quintana Roo,general,7,36.0,40.0,25.0,34.0,36.0
+Quintana Roo,general,8,24.0,40.0,17.0,35.0,38.0
+Quintana Roo,general,9,14.0,40.0,34.0,35.0,37.0
+Quintana Roo,general,10,25.0,39.0,20.0,35.0,36.0
+Quintana Roo,general,11,36.0,39.0,28.0,38.0,37.0
+Quintana Roo,general,12,29.0,39.0,26.0,35.0,36.0
+Quintana Roo,general,13,34.0,39.0,31.0,30.0,35.0
+Quintana Roo,general,14,20.0,39.0,29.0,30.0,34.0
+Quintana Roo,general,15,26.0,39.0,22.0,32.0,36.0
+Quintana Roo,general,16,25.0,39.0,38.0,29.0,36.0
+Quintana Roo,general,17,37.0,38.0,36.0,32.0,36.0
+Quintana Roo,general,18,21.0,37.0,35.0,31.0,35.0
+Quintana Roo,men,3,8.0,9.0,9.0,6.0,10.0
+Quintana Roo,men,4,9.0,9.0,8.0,10.0,12.0
+Quintana Roo,men,5,6.0,9.0,10.0,9.0,12.0
+Quintana Roo,men,6,17.0,9.0,11.0,8.0,11.0
+Quintana Roo,men,7,10.0,10.0,11.0,8.0,11.0
+Quintana Roo,men,8,7.0,10.0,10.0,8.0,11.0
+Quintana Roo,men,9,3.0,10.0,10.0,10.0,11.0
+Quintana Roo,men,10,7.0,10.0,5.0,8.0,11.0
+Quintana Roo,men,11,12.0,10.0,6.0,9.0,11.0
+Quintana Roo,men,12,10.0,10.0,10.0,8.0,11.0
+Quintana Roo,men,13,6.0,10.0,3.0,8.0,11.0
+Quintana Roo,men,14,5.0,10.0,5.0,10.0,11.0
+Quintana Roo,men,15,12.0,10.0,8.0,10.0,12.0
+Quintana Roo,men,16,9.0,9.0,7.0,8.0,12.0
+Quintana Roo,men,17,7.0,9.0,6.0,8.0,11.0
+Quintana Roo,men,18,11.0,9.0,4.0,8.0,10.0
+Quintana Roo,women,3,22.0,23.0,22.0,27.0,24.0
+Quintana Roo,women,4,23.0,24.0,25.0,24.0,25.0
+Quintana Roo,women,5,19.0,26.0,19.0,26.0,27.0
+Quintana Roo,women,6,40.0,27.0,31.0,24.0,25.0
+Quintana Roo,women,7,30.0,28.0,16.0,24.0,25.0
+Quintana Roo,women,8,18.0,28.0,21.0,28.0,27.0
+Quintana Roo,women,9,12.0,28.0,28.0,27.0,26.0
+Quintana Roo,women,10,18.0,28.0,19.0,28.0,25.0
+Quintana Roo,women,11,25.0,28.0,21.0,27.0,26.0
+Quintana Roo,women,12,20.0,27.0,27.0,28.0,25.0
+Quintana Roo,women,13,29.0,27.0,26.0,24.0,25.0
+Quintana Roo,women,14,16.0,27.0,14.0,21.0,24.0
+Quintana Roo,women,15,14.0,27.0,21.0,24.0,24.0
+Quintana Roo,women,16,24.0,27.0,21.0,23.0,25.0
+Quintana Roo,women,17,30.0,27.0,26.0,26.0,26.0
+Quintana Roo,women,18,10.0,27.0,24.0,23.0,26.0
+San Luis Potosí,general,3,116.0,47.0,59.0,49.0,64.0
+San Luis Potosí,general,4,49.0,49.0,52.0,62.0,65.0
+San Luis Potosí,general,5,41.0,52.0,58.0,59.0,73.0
+San Luis Potosí,general,6,34.0,55.0,65.0,61.0,72.0
+San Luis Potosí,general,7,43.0,57.0,73.0,60.0,71.0
+San Luis Potosí,general,8,53.0,59.0,52.0,59.0,77.0
+San Luis Potosí,general,9,53.0,61.0,65.0,59.0,77.0
+San Luis Potosí,general,10,48.0,61.0,61.0,61.0,70.0
+San Luis Potosí,general,11,55.0,61.0,55.0,66.0,76.0
+San Luis Potosí,general,12,47.0,60.0,38.0,65.0,75.0
+San Luis Potosí,general,13,35.0,59.0,44.0,60.0,67.0
+San Luis Potosí,general,14,26.0,57.0,31.0,60.0,66.0
+San Luis Potosí,general,15,52.0,56.0,29.0,60.0,71.0
+San Luis Potosí,general,16,52.0,56.0,38.0,61.0,71.0
+San Luis Potosí,general,17,45.0,56.0,42.0,61.0,72.0
+San Luis Potosí,general,18,43.0,56.0,39.0,60.0,72.0
+San Luis Potosí,men,3,37.0,12.0,11.0,13.0,15.0
+San Luis Potosí,men,4,12.0,13.0,10.0,15.0,16.0
+San Luis Potosí,men,5,12.0,13.0,13.0,16.0,17.0
+San Luis Potosí,men,6,10.0,14.0,14.0,13.0,16.0
+San Luis Potosí,men,7,6.0,14.0,15.0,13.0,16.0
+San Luis Potosí,men,8,9.0,14.0,17.0,17.0,16.0
+San Luis Potosí,men,9,14.0,15.0,18.0,13.0,17.0
+San Luis Potosí,men,10,13.0,15.0,14.0,16.0,18.0
+San Luis Potosí,men,11,15.0,14.0,12.0,15.0,18.0
+San Luis Potosí,men,12,17.0,14.0,13.0,17.0,17.0
+San Luis Potosí,men,13,7.0,14.0,14.0,15.0,16.0
+San Luis Potosí,men,14,9.0,13.0,13.0,15.0,15.0
+San Luis Potosí,men,15,9.0,13.0,8.0,14.0,15.0
+San Luis Potosí,men,16,11.0,12.0,10.0,14.0,14.0
+San Luis Potosí,men,17,7.0,12.0,13.0,13.0,14.0
+San Luis Potosí,men,18,10.0,13.0,17.0,13.0,16.0
+San Luis Potosí,women,3,79.0,34.0,39.0,34.0,52.0
+San Luis Potosí,women,4,37.0,36.0,38.0,45.0,50.0
+San Luis Potosí,women,5,29.0,38.0,27.0,43.0,57.0
+San Luis Potosí,women,6,24.0,41.0,42.0,44.0,55.0
+San Luis Potosí,women,7,37.0,43.0,47.0,43.0,55.0
+San Luis Potosí,women,8,44.0,45.0,50.0,42.0,61.0
+San Luis Potosí,women,9,39.0,46.0,42.0,45.0,61.0
+San Luis Potosí,women,10,35.0,46.0,44.0,46.0,54.0
+San Luis Potosí,women,11,40.0,46.0,40.0,46.0,60.0
+San Luis Potosí,women,12,30.0,46.0,33.0,47.0,58.0
+San Luis Potosí,women,13,28.0,45.0,34.0,45.0,52.0
+San Luis Potosí,women,14,17.0,45.0,24.0,44.0,52.0
+San Luis Potosí,women,15,43.0,44.0,20.0,45.0,55.0
+San Luis Potosí,women,16,41.0,43.0,28.0,46.0,55.0
+San Luis Potosí,women,17,38.0,43.0,27.0,46.0,54.0
+San Luis Potosí,women,18,33.0,43.0,24.0,46.0,54.0
+Sinaloa,general,3,88.0,71.0,94.0,84.0,96.0
+Sinaloa,general,4,114.0,78.0,102.0,99.0,112.0
+Sinaloa,general,5,96.0,86.0,97.0,107.0,119.0
+Sinaloa,general,6,66.0,92.0,95.0,108.0,119.0
+Sinaloa,general,7,66.0,96.0,88.0,104.0,118.0
+Sinaloa,general,8,78.0,98.0,91.0,103.0,119.0
+Sinaloa,general,9,91.0,97.0,109.0,107.0,124.0
+Sinaloa,general,10,81.0,96.0,100.0,112.0,125.0
+Sinaloa,general,11,68.0,94.0,99.0,112.0,132.0
+Sinaloa,general,12,68.0,93.0,105.0,107.0,127.0
+Sinaloa,general,13,106.0,92.0,97.0,102.0,115.0
+Sinaloa,general,14,45.0,92.0,85.0,101.0,115.0
+Sinaloa,general,15,74.0,92.0,97.0,105.0,120.0
+Sinaloa,general,16,83.0,93.0,94.0,109.0,125.0
+Sinaloa,general,17,80.0,92.0,105.0,109.0,126.0
+Sinaloa,general,18,109.0,92.0,77.0,105.0,120.0
+Sinaloa,men,3,22.0,21.0,23.0,26.0,33.0
+Sinaloa,men,4,28.0,23.0,27.0,29.0,37.0
+Sinaloa,men,5,32.0,24.0,30.0,30.0,38.0
+Sinaloa,men,6,23.0,26.0,23.0,30.0,38.0
+Sinaloa,men,7,20.0,27.0,25.0,29.0,37.0
+Sinaloa,men,8,21.0,27.0,26.0,29.0,36.0
+Sinaloa,men,9,19.0,27.0,31.0,30.0,38.0
+Sinaloa,men,10,17.0,27.0,33.0,31.0,38.0
+Sinaloa,men,11,21.0,27.0,31.0,31.0,40.0
+Sinaloa,men,12,18.0,27.0,28.0,31.0,39.0
+Sinaloa,men,13,27.0,27.0,32.0,30.0,37.0
+Sinaloa,men,14,16.0,27.0,33.0,29.0,37.0
+Sinaloa,men,15,20.0,26.0,33.0,30.0,38.0
+Sinaloa,men,16,24.0,26.0,22.0,31.0,39.0
+Sinaloa,men,17,17.0,25.0,30.0,32.0,40.0
+Sinaloa,men,18,36.0,24.0,18.0,31.0,39.0
+Sinaloa,women,3,67.0,51.0,70.0,59.0,63.0
+Sinaloa,women,4,88.0,56.0,83.0,69.0,76.0
+Sinaloa,women,5,65.0,62.0,64.0,75.0,81.0
+Sinaloa,women,6,56.0,67.0,57.0,73.0,82.0
+Sinaloa,women,7,49.0,70.0,49.0,72.0,82.0
+Sinaloa,women,8,68.0,71.0,56.0,70.0,82.0
+Sinaloa,women,9,75.0,71.0,66.0,75.0,86.0
+Sinaloa,women,10,64.0,70.0,64.0,74.0,87.0
+Sinaloa,women,11,50.0,69.0,85.0,81.0,91.0
+Sinaloa,women,12,60.0,67.0,62.0,72.0,87.0
+Sinaloa,women,13,81.0,66.0,93.0,70.0,78.0
+Sinaloa,women,14,33.0,66.0,81.0,69.0,79.0
+Sinaloa,women,15,54.0,66.0,51.0,71.0,82.0
+Sinaloa,women,16,70.0,66.0,52.0,72.0,84.0
+Sinaloa,women,17,66.0,66.0,57.0,70.0,86.0
+Sinaloa,women,18,81.0,66.0,62.0,68.0,81.0
+Sonora,general,3,74.0,46.0,68.0,59.0,50.0
+Sonora,general,4,77.0,52.0,66.0,66.0,56.0
+Sonora,general,5,58.0,58.0,66.0,69.0,58.0
+Sonora,general,6,55.0,64.0,56.0,65.0,56.0
+Sonora,general,7,75.0,69.0,56.0,65.0,57.0
+Sonora,general,8,85.0,72.0,63.0,63.0,62.0
+Sonora,general,9,60.0,74.0,67.0,62.0,65.0
+Sonora,general,10,66.0,73.0,66.0,65.0,72.0
+Sonora,general,11,68.0,72.0,60.0,61.0,65.0
+Sonora,general,12,47.0,70.0,54.0,59.0,61.0
+Sonora,general,13,66.0,69.0,58.0,61.0,60.0
+Sonora,general,14,36.0,68.0,63.0,66.0,60.0
+Sonora,general,15,62.0,69.0,61.0,61.0,59.0
+Sonora,general,16,61.0,70.0,56.0,64.0,61.0
+Sonora,general,17,63.0,72.0,74.0,67.0,70.0
+Sonora,general,18,56.0,73.0,65.0,68.0,60.0
+Sonora,men,3,12.0,14.0,10.0,16.0,18.0
+Sonora,men,4,25.0,14.0,15.0,18.0,20.0
+Sonora,men,5,11.0,15.0,13.0,19.0,21.0
+Sonora,men,6,16.0,16.0,15.0,18.0,20.0
+Sonora,men,7,20.0,17.0,15.0,17.0,19.0
+Sonora,men,8,17.0,17.0,18.0,17.0,20.0
+Sonora,men,9,15.0,18.0,10.0,20.0,22.0
+Sonora,men,10,16.0,17.0,18.0,20.0,24.0
+Sonora,men,11,21.0,17.0,17.0,21.0,24.0
+Sonora,men,12,15.0,17.0,12.0,21.0,23.0
+Sonora,men,13,18.0,17.0,18.0,20.0,21.0
+Sonora,men,14,10.0,16.0,25.0,20.0,21.0
+Sonora,men,15,18.0,16.0,13.0,20.0,21.0
+Sonora,men,16,16.0,16.0,8.0,21.0,22.0
+Sonora,men,17,15.0,16.0,13.0,21.0,22.0
+Sonora,men,18,12.0,17.0,13.0,20.0,22.0
+Sonora,women,3,62.0,37.0,34.0,38.0,36.0
+Sonora,women,4,52.0,40.0,38.0,43.0,42.0
+Sonora,women,5,47.0,45.0,43.0,47.0,43.0
+Sonora,women,6,42.0,48.0,38.0,47.0,43.0
+Sonora,women,7,55.0,52.0,38.0,47.0,45.0
+Sonora,women,8,69.0,53.0,45.0,49.0,47.0
+Sonora,women,9,48.0,54.0,50.0,44.0,49.0
+Sonora,women,10,51.0,54.0,57.0,44.0,54.0
+Sonora,women,11,49.0,53.0,48.0,43.0,50.0
+Sonora,women,12,35.0,52.0,61.0,40.0,48.0
+Sonora,women,13,52.0,52.0,57.0,40.0,45.0
+Sonora,women,14,29.0,52.0,52.0,45.0,45.0
+Sonora,women,15,44.0,52.0,50.0,39.0,45.0
+Sonora,women,16,45.0,53.0,59.0,44.0,47.0
+Sonora,women,17,49.0,54.0,63.0,46.0,52.0
+Sonora,women,18,44.0,55.0,50.0,42.0,47.0
+Tabasco,general,3,62.0,69.0,49.0,70.0,75.0
+Tabasco,general,4,75.0,76.0,73.0,88.0,80.0
+Tabasco,general,5,58.0,85.0,63.0,90.0,90.0
+Tabasco,general,6,53.0,93.0,68.0,82.0,91.0
+Tabasco,general,7,52.0,100.0,92.0,83.0,95.0
+Tabasco,general,8,50.0,106.0,81.0,82.0,97.0
+Tabasco,general,9,41.0,109.0,102.0,86.0,97.0
+Tabasco,general,10,41.0,111.0,77.0,88.0,101.0
+Tabasco,general,11,51.0,110.0,79.0,88.0,102.0
+Tabasco,general,12,53.0,108.0,116.0,89.0,100.0
+Tabasco,general,13,58.0,105.0,94.0,86.0,96.0
+Tabasco,general,14,38.0,101.0,97.0,83.0,94.0
+Tabasco,general,15,79.0,96.0,64.0,84.0,91.0
+Tabasco,general,16,54.0,93.0,58.0,81.0,94.0
+Tabasco,general,17,43.0,90.0,85.0,83.0,94.0
+Tabasco,general,18,48.0,88.0,65.0,75.0,86.0
+Tabasco,men,3,20.0,18.0,16.0,31.0,27.0
+Tabasco,men,4,19.0,22.0,17.0,34.0,29.0
+Tabasco,men,5,15.0,26.0,16.0,35.0,32.0
+Tabasco,men,6,19.0,30.0,29.0,36.0,33.0
+Tabasco,men,7,11.0,33.0,40.0,36.0,33.0
+Tabasco,men,8,13.0,35.0,47.0,37.0,34.0
+Tabasco,men,9,8.0,36.0,40.0,38.0,35.0
+Tabasco,men,10,14.0,37.0,39.0,39.0,36.0
+Tabasco,men,11,19.0,36.0,26.0,39.0,36.0
+Tabasco,men,12,19.0,36.0,38.0,39.0,36.0
+Tabasco,men,13,17.0,35.0,55.0,37.0,35.0
+Tabasco,men,14,4.0,35.0,35.0,37.0,34.0
+Tabasco,men,15,23.0,35.0,31.0,37.0,34.0
+Tabasco,men,16,12.0,34.0,27.0,38.0,35.0
+Tabasco,men,17,17.0,34.0,47.0,38.0,35.0
+Tabasco,men,18,14.0,34.0,45.0,37.0,34.0
+Tabasco,women,3,46.0,48.0,44.0,44.0,55.0
+Tabasco,women,4,56.0,53.0,51.0,65.0,59.0
+Tabasco,women,5,43.0,59.0,46.0,64.0,66.0
+Tabasco,women,6,34.0,64.0,47.0,51.0,67.0
+Tabasco,women,7,23.0,69.0,60.0,52.0,70.0
+Tabasco,women,8,55.0,73.0,65.0,52.0,72.0
+Tabasco,women,9,12.0,75.0,76.0,53.0,71.0
+Tabasco,women,10,48.0,76.0,61.0,55.0,75.0
+Tabasco,women,11,32.0,76.0,68.0,66.0,75.0
+Tabasco,women,12,34.0,74.0,67.0,57.0,72.0
+Tabasco,women,13,41.0,72.0,58.0,58.0,70.0
+Tabasco,women,14,8.0,68.0,67.0,55.0,68.0
+Tabasco,women,15,56.0,65.0,53.0,52.0,65.0
+Tabasco,women,16,43.0,62.0,46.0,52.0,67.0
+Tabasco,women,17,52.0,59.0,45.0,52.0,66.0
+Tabasco,women,18,34.0,59.0,40.0,48.0,61.0
+Tamaulipas,general,3,78.0,51.0,54.0,49.0,58.0
+Tamaulipas,general,4,49.0,54.0,55.0,58.0,62.0
+Tamaulipas,general,5,62.0,58.0,41.0,65.0,68.0
+Tamaulipas,general,6,56.0,62.0,54.0,67.0,73.0
+Tamaulipas,general,7,51.0,64.0,46.0,68.0,74.0
+Tamaulipas,general,8,72.0,66.0,69.0,69.0,73.0
+Tamaulipas,general,9,55.0,66.0,50.0,70.0,74.0
+Tamaulipas,general,10,65.0,65.0,72.0,70.0,75.0
+Tamaulipas,general,11,60.0,64.0,56.0,67.0,72.0
+Tamaulipas,general,12,44.0,63.0,91.0,62.0,67.0
+Tamaulipas,general,13,82.0,62.0,64.0,59.0,61.0
+Tamaulipas,general,14,45.0,63.0,66.0,60.0,67.0
+Tamaulipas,general,15,39.0,63.0,71.0,65.0,72.0
+Tamaulipas,general,16,54.0,64.0,64.0,72.0,81.0
+Tamaulipas,general,17,56.0,64.0,92.0,76.0,78.0
+Tamaulipas,general,18,38.0,64.0,101.0,74.0,76.0
+Tamaulipas,men,3,25.0,14.0,27.0,16.0,15.0
+Tamaulipas,men,4,11.0,15.0,12.0,17.0,14.0
+Tamaulipas,men,5,19.0,15.0,16.0,17.0,12.0
+Tamaulipas,men,6,14.0,16.0,15.0,17.0,18.0
+Tamaulipas,men,7,14.0,16.0,28.0,17.0,18.0
+Tamaulipas,men,8,12.0,17.0,21.0,18.0,18.0
+Tamaulipas,men,9,18.0,17.0,14.0,18.0,16.0
+Tamaulipas,men,10,22.0,16.0,15.0,19.0,16.0
+Tamaulipas,men,11,15.0,16.0,26.0,19.0,17.0
+Tamaulipas,men,12,6.0,16.0,19.0,17.0,15.0
+Tamaulipas,men,13,30.0,15.0,10.0,20.0,14.0
+Tamaulipas,men,14,12.0,15.0,17.0,19.0,17.0
+Tamaulipas,men,15,8.0,15.0,15.0,21.0,20.0
+Tamaulipas,men,16,17.0,15.0,19.0,22.0,18.0
+Tamaulipas,men,17,13.0,15.0,17.0,22.0,16.0
+Tamaulipas,men,18,9.0,15.0,16.0,22.0,15.0
+Tamaulipas,women,3,53.0,38.0,48.0,41.0,42.0
+Tamaulipas,women,4,38.0,40.0,53.0,46.0,47.0
+Tamaulipas,women,5,46.0,44.0,44.0,48.0,51.0
+Tamaulipas,women,6,44.0,46.0,44.0,49.0,53.0
+Tamaulipas,women,7,40.0,48.0,54.0,49.0,54.0
+Tamaulipas,women,8,60.0,49.0,53.0,49.0,54.0
+Tamaulipas,women,9,38.0,49.0,48.0,51.0,56.0
+Tamaulipas,women,10,43.0,48.0,48.0,52.0,57.0
+Tamaulipas,women,11,45.0,48.0,45.0,51.0,55.0
+Tamaulipas,women,12,38.0,47.0,45.0,48.0,52.0
+Tamaulipas,women,13,52.0,47.0,41.0,47.0,48.0
+Tamaulipas,women,14,37.0,48.0,47.0,47.0,50.0
+Tamaulipas,women,15,31.0,49.0,49.0,51.0,54.0
+Tamaulipas,women,16,37.0,49.0,53.0,55.0,62.0
+Tamaulipas,women,17,45.0,49.0,50.0,58.0,62.0
+Tamaulipas,women,18,43.0,49.0,62.0,57.0,61.0
+Tlaxcala,general,3,17.0,21.0,17.0,24.0,28.0
+Tlaxcala,general,4,15.0,23.0,20.0,26.0,31.0
+Tlaxcala,general,5,16.0,24.0,18.0,27.0,32.0
+Tlaxcala,general,6,20.0,26.0,20.0,27.0,31.0
+Tlaxcala,general,7,23.0,27.0,18.0,27.0,31.0
+Tlaxcala,general,8,13.0,29.0,23.0,27.0,33.0
+Tlaxcala,general,9,25.0,30.0,23.0,28.0,36.0
+Tlaxcala,general,10,21.0,30.0,21.0,29.0,38.0
+Tlaxcala,general,11,14.0,30.0,28.0,28.0,38.0
+Tlaxcala,general,12,14.0,31.0,31.0,27.0,36.0
+Tlaxcala,general,13,23.0,31.0,34.0,28.0,34.0
+Tlaxcala,general,14,14.0,31.0,28.0,28.0,35.0
+Tlaxcala,general,15,17.0,30.0,38.0,28.0,36.0
+Tlaxcala,general,16,23.0,30.0,34.0,30.0,37.0
+Tlaxcala,general,17,30.0,30.0,30.0,30.0,37.0
+Tlaxcala,general,18,26.0,30.0,30.0,28.0,36.0
+Tlaxcala,men,3,2.0,6.0,4.0,5.0,5.0
+Tlaxcala,men,4,3.0,6.0,5.0,5.0,6.0
+Tlaxcala,men,5,4.0,6.0,6.0,4.0,6.0
+Tlaxcala,men,6,0.0,6.0,8.0,5.0,5.0
+Tlaxcala,men,7,5.0,6.0,7.0,5.0,5.0
+Tlaxcala,men,8,5.0,6.0,4.0,5.0,5.0
+Tlaxcala,men,9,4.0,6.0,3.0,6.0,6.0
+Tlaxcala,men,10,2.0,6.0,8.0,5.0,6.0
+Tlaxcala,men,11,2.0,7.0,6.0,6.0,6.0
+Tlaxcala,men,12,2.0,7.0,5.0,6.0,7.0
+Tlaxcala,men,13,5.0,7.0,7.0,6.0,6.0
+Tlaxcala,men,14,3.0,7.0,8.0,6.0,7.0
+Tlaxcala,men,15,5.0,7.0,8.0,6.0,6.0
+Tlaxcala,men,16,6.0,7.0,5.0,7.0,7.0
+Tlaxcala,men,17,11.0,7.0,6.0,6.0,6.0
+Tlaxcala,men,18,9.0,6.0,4.0,6.0,6.0
+Tlaxcala,women,3,18.0,15.0,15.0,17.0,23.0
+Tlaxcala,women,4,14.0,17.0,15.0,19.0,24.0
+Tlaxcala,women,5,12.0,18.0,11.0,19.0,25.0
+Tlaxcala,women,6,20.0,21.0,18.0,18.0,25.0
+Tlaxcala,women,7,22.0,22.0,8.0,18.0,26.0
+Tlaxcala,women,8,8.0,24.0,20.0,18.0,27.0
+Tlaxcala,women,9,21.0,25.0,13.0,20.0,30.0
+Tlaxcala,women,10,19.0,26.0,9.0,19.0,31.0
+Tlaxcala,women,11,12.0,27.0,11.0,18.0,31.0
+Tlaxcala,women,12,17.0,27.0,19.0,18.0,29.0
+Tlaxcala,women,13,19.0,26.0,11.0,18.0,27.0
+Tlaxcala,women,14,17.0,26.0,9.0,18.0,28.0
+Tlaxcala,women,15,18.0,25.0,17.0,18.0,29.0
+Tlaxcala,women,16,16.0,24.0,20.0,20.0,30.0
+Tlaxcala,women,17,25.0,24.0,12.0,21.0,30.0
+Tlaxcala,women,18,23.0,23.0,14.0,20.0,29.0
+Veracruz,general,3,113.0,95.0,102.0,106.0,95.0
+Veracruz,general,4,119.0,107.0,129.0,124.0,107.0
+Veracruz,general,5,89.0,120.0,118.0,136.0,114.0
+Veracruz,general,6,101.0,133.0,130.0,126.0,110.0
+Veracruz,general,7,127.0,143.0,120.0,122.0,108.0
+Veracruz,general,8,93.0,148.0,115.0,127.0,117.0
+Veracruz,general,9,96.0,148.0,139.0,132.0,121.0
+Veracruz,general,10,130.0,145.0,136.0,138.0,126.0
+Veracruz,general,11,133.0,139.0,134.0,135.0,128.0
+Veracruz,general,12,126.0,133.0,140.0,129.0,125.0
+Veracruz,general,13,111.0,129.0,151.0,124.0,112.0
+Veracruz,general,14,63.0,127.0,142.0,124.0,109.0
+Veracruz,general,15,84.0,127.0,119.0,123.0,112.0
+Veracruz,general,16,147.0,128.0,123.0,130.0,121.0
+Veracruz,general,17,105.0,130.0,119.0,129.0,123.0
+Veracruz,general,18,98.0,132.0,148.0,128.0,123.0
+Veracruz,men,3,28.0,27.0,29.0,27.0,22.0
+Veracruz,men,4,31.0,29.0,31.0,32.0,24.0
+Veracruz,men,5,25.0,31.0,25.0,30.0,26.0
+Veracruz,men,6,28.0,34.0,28.0,33.0,25.0
+Veracruz,men,7,33.0,36.0,30.0,32.0,25.0
+Veracruz,men,8,15.0,37.0,36.0,31.0,26.0
+Veracruz,men,9,23.0,38.0,34.0,31.0,28.0
+Veracruz,men,10,29.0,38.0,43.0,35.0,29.0
+Veracruz,men,11,37.0,37.0,25.0,34.0,30.0
+Veracruz,men,12,37.0,36.0,25.0,32.0,29.0
+Veracruz,men,13,32.0,35.0,36.0,32.0,27.0
+Veracruz,men,14,17.0,34.0,26.0,32.0,25.0
+Veracruz,men,15,19.0,33.0,24.0,31.0,25.0
+Veracruz,men,16,37.0,33.0,13.0,32.0,26.0
+Veracruz,men,17,25.0,33.0,24.0,30.0,27.0
+Veracruz,men,18,20.0,34.0,22.0,31.0,29.0
+Veracruz,women,3,85.0,79.0,79.0,78.0,68.0
+Veracruz,women,4,88.0,87.0,90.0,96.0,81.0
+Veracruz,women,5,64.0,97.0,96.0,104.0,89.0
+Veracruz,women,6,73.0,107.0,91.0,98.0,85.0
+Veracruz,women,7,94.0,115.0,91.0,94.0,83.0
+Veracruz,women,8,78.0,120.0,78.0,95.0,89.0
+Veracruz,women,9,73.0,121.0,94.0,99.0,92.0
+Veracruz,women,10,101.0,118.0,103.0,105.0,95.0
+Veracruz,women,11,96.0,114.0,114.0,104.0,95.0
+Veracruz,women,12,89.0,110.0,114.0,98.0,92.0
+Veracruz,women,13,79.0,106.0,101.0,94.0,84.0
+Veracruz,women,14,46.0,104.0,132.0,94.0,83.0
+Veracruz,women,15,65.0,103.0,104.0,94.0,86.0
+Veracruz,women,16,110.0,103.0,99.0,97.0,91.0
+Veracruz,women,17,80.0,104.0,110.0,98.0,91.0
+Veracruz,women,18,74.0,105.0,100.0,96.0,91.0
+Yucatán,general,3,97.0,76.0,53.0,66.0,82.0
+Yucatán,general,4,102.0,82.0,81.0,72.0,91.0
+Yucatán,general,5,89.0,88.0,76.0,76.0,95.0
+Yucatán,general,6,59.0,93.0,76.0,74.0,92.0
+Yucatán,general,7,136.0,98.0,74.0,72.0,89.0
+Yucatán,general,8,105.0,102.0,71.0,74.0,92.0
+Yucatán,general,9,135.0,105.0,78.0,78.0,103.0
+Yucatán,general,10,129.0,107.0,85.0,80.0,108.0
+Yucatán,general,11,84.0,108.0,83.0,79.0,108.0
+Yucatán,general,12,67.0,108.0,107.0,77.0,105.0
+Yucatán,general,13,154.0,107.0,91.0,75.0,99.0
+Yucatán,general,14,136.0,105.0,88.0,75.0,99.0
+Yucatán,general,15,109.0,102.0,95.0,75.0,100.0
+Yucatán,general,16,164.0,99.0,73.0,73.0,100.0
+Yucatán,general,17,112.0,98.0,94.0,73.0,98.0
+Yucatán,general,18,64.0,97.0,88.0,73.0,98.0
+Yucatán,men,3,20.0,21.0,26.0,19.0,23.0
+Yucatán,men,4,25.0,22.0,27.0,21.0,25.0
+Yucatán,men,5,17.0,22.0,23.0,22.0,26.0
+Yucatán,men,6,18.0,23.0,24.0,21.0,26.0
+Yucatán,men,7,44.0,24.0,28.0,20.0,25.0
+Yucatán,men,8,31.0,24.0,31.0,20.0,25.0
+Yucatán,men,9,44.0,25.0,32.0,22.0,26.0
+Yucatán,men,10,21.0,25.0,30.0,23.0,28.0
+Yucatán,men,11,21.0,26.0,27.0,23.0,28.0
+Yucatán,men,12,19.0,26.0,38.0,23.0,28.0
+Yucatán,men,13,36.0,26.0,35.0,22.0,27.0
+Yucatán,men,14,32.0,26.0,30.0,22.0,27.0
+Yucatán,men,15,35.0,25.0,34.0,22.0,27.0
+Yucatán,men,16,93.0,25.0,28.0,22.0,27.0
+Yucatán,men,17,20.0,24.0,39.0,21.0,26.0
+Yucatán,men,18,10.0,24.0,17.0,21.0,26.0
+Yucatán,women,3,77.0,57.0,44.0,45.0,56.0
+Yucatán,women,4,77.0,62.0,58.0,51.0,60.0
+Yucatán,women,5,72.0,66.0,74.0,54.0,61.0
+Yucatán,women,6,41.0,71.0,83.0,52.0,60.0
+Yucatán,women,7,93.0,74.0,66.0,51.0,56.0
+Yucatán,women,8,74.0,77.0,51.0,52.0,61.0
+Yucatán,women,9,91.0,79.0,87.0,54.0,70.0
+Yucatán,women,10,108.0,81.0,86.0,56.0,74.0
+Yucatán,women,11,64.0,81.0,79.0,55.0,75.0
+Yucatán,women,12,52.0,81.0,73.0,53.0,73.0
+Yucatán,women,13,118.0,81.0,78.0,52.0,68.0
+Yucatán,women,14,104.0,79.0,76.0,51.0,68.0
+Yucatán,women,15,74.0,77.0,87.0,50.0,68.0
+Yucatán,women,16,263.0,75.0,78.0,51.0,70.0
+Yucatán,women,17,92.0,74.0,78.0,51.0,69.0
+Yucatán,women,18,56.0,73.0,68.0,51.0,70.0
+Zacatecas,general,3,64.0,43.0,66.0,45.0,56.0
+Zacatecas,general,4,66.0,44.0,63.0,48.0,59.0
+Zacatecas,general,5,64.0,46.0,61.0,48.0,59.0
+Zacatecas,general,6,56.0,47.0,59.0,47.0,56.0
+Zacatecas,general,7,67.0,49.0,63.0,46.0,55.0
+Zacatecas,general,8,82.0,50.0,55.0,46.0,58.0
+Zacatecas,general,9,52.0,52.0,57.0,48.0,64.0
+Zacatecas,general,10,47.0,53.0,49.0,51.0,65.0
+Zacatecas,general,11,50.0,56.0,48.0,51.0,72.0
+Zacatecas,general,12,47.0,58.0,58.0,54.0,73.0
+Zacatecas,general,13,71.0,60.0,53.0,53.0,70.0
+Zacatecas,general,14,42.0,60.0,49.0,51.0,64.0
+Zacatecas,general,15,50.0,60.0,45.0,50.0,64.0
+Zacatecas,general,16,64.0,59.0,47.0,50.0,66.0
+Zacatecas,general,17,56.0,58.0,53.0,50.0,71.0
+Zacatecas,general,18,44.0,57.0,47.0,51.0,71.0
+Zacatecas,men,3,16.0,11.0,19.0,10.0,12.0
+Zacatecas,men,4,17.0,11.0,11.0,12.0,13.0
+Zacatecas,men,5,14.0,11.0,17.0,9.0,13.0
+Zacatecas,men,6,11.0,11.0,18.0,9.0,13.0
+Zacatecas,men,7,16.0,11.0,13.0,9.0,13.0
+Zacatecas,men,8,17.0,11.0,7.0,10.0,14.0
+Zacatecas,men,9,16.0,12.0,7.0,12.0,13.0
+Zacatecas,men,10,13.0,12.0,12.0,10.0,14.0
+Zacatecas,men,11,15.0,12.0,11.0,13.0,15.0
+Zacatecas,men,12,10.0,13.0,11.0,10.0,15.0
+Zacatecas,men,13,17.0,13.0,11.0,10.0,14.0
+Zacatecas,men,14,11.0,12.0,9.0,10.0,13.0
+Zacatecas,men,15,9.0,12.0,11.0,9.0,13.0
+Zacatecas,men,16,18.0,12.0,10.0,10.0,14.0
+Zacatecas,men,17,17.0,12.0,11.0,10.0,14.0
+Zacatecas,men,18,12.0,12.0,13.0,10.0,14.0
+Zacatecas,women,3,48.0,33.0,49.0,40.0,44.0
+Zacatecas,women,4,49.0,35.0,51.0,43.0,47.0
+Zacatecas,women,5,50.0,36.0,45.0,45.0,47.0
+Zacatecas,women,6,45.0,37.0,45.0,44.0,46.0
+Zacatecas,women,7,51.0,38.0,45.0,42.0,45.0
+Zacatecas,women,8,65.0,38.0,44.0,42.0,45.0
+Zacatecas,women,9,37.0,39.0,51.0,43.0,49.0
+Zacatecas,women,10,34.0,40.0,49.0,46.0,51.0
+Zacatecas,women,11,35.0,42.0,44.0,48.0,55.0
+Zacatecas,women,12,37.0,44.0,48.0,49.0,57.0
+Zacatecas,women,13,54.0,46.0,46.0,49.0,55.0
+Zacatecas,women,14,30.0,48.0,42.0,48.0,52.0
+Zacatecas,women,15,42.0,49.0,37.0,48.0,52.0
+Zacatecas,women,16,47.0,48.0,37.0,48.0,52.0
+Zacatecas,women,17,39.0,47.0,37.0,48.0,56.0
+Zacatecas,women,18,32.0,45.0,33.0,48.0,56.0

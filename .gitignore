@@ -6,6 +6,9 @@ venv/
 # boletin), pero la tabla suplementaria que el paper referencia SI se publica.
 data/*
 !data/per_series_out_of_sample_2026.csv
+!data/cv_metrics_per_series.csv
+!data/weekly_2026_per_series.csv
+!data/frozen_assignment.csv
 !data/ablation_results.csv
 outputs/
 checkpoints/
