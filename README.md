@@ -27,7 +27,9 @@ paper has since been accepted and the author information above is now public.
 | `analysis/statistical_tests.py` | Results / Out-of-sample | one-sided Wilcoxon signed-rank (CV) and Diebold-Mariano with HLN correction (2026) |
 | `analysis/reconciliation.py` | Discussion | minimum-trace (MinT, diagonal WLS) hierarchical reconciliation sanity check |
 | `analysis/baselines.py` | Table (baselines) | tuned Auto-ARIMA + Fourier and a PatchTST transformer under the identical CV |
+| `analysis/ablation.py` | §5.1, Table 3 | **ablation of the candidate pool**: the selection rule re-run on every subset, static and dynamic regimes, paired Wilcoxon against the full pool |
 | `data/per_series_out_of_sample_2026.csv` | §4.2, Appendix A | **per-entity out-of-sample table**: sMAPE and MASE per model for all 111 series-stratum combinations |
+| `data/ablation_results.csv` | §5.1, Table 3 | the published ablation numbers, as reported |
 
 ## Models
 
@@ -63,6 +65,20 @@ in the paper and in the table below is in bulletin numbering. Skipping this step
 compares observation and forecast one week apart, which silently inflates the
 error.
 
+### Ablation of the candidate pool
+
+`analysis/ablation.py` reproduces Table 3: the selection rule re-run restricted to each
+subset of the four candidates, in two regimes — *static*, selecting once from
+cross-validated evidence as deployed, and *dynamic*, reselecting on the early 2026 weeks
+and scoring on the later weeks it never saw. Policies are compared **pairwise over the
+same series**; comparing each policy's own reassigned subset would compare different sets
+of series, which is the easiest way to get this experiment wrong.
+
+`data/ablation_results.csv` holds the published numbers. The headline finding is negative
+and is reported as such in the paper: no leave-one-out variant separates from the full
+pool, and a single-model policy matches it. What does separate from the frozen baseline
+is revision.
+
 ### Supplementary table
 
 `data/per_series_out_of_sample_2026.csv` is the per-entity out-of-sample table
@@ -83,6 +99,7 @@ be pooled.
 pip install -r requirements.txt
 # place the assembled panels under data/ (see script docstrings)
 python analysis/statistical_tests.py     # Wilcoxon (CV) + Diebold-Mariano (2026)
+python analysis/ablation.py               # candidate-pool ablation (Table 3)
 python analysis/reconciliation.py         # MinT incoherence pre/post
 python analysis/baselines.py --help       # Auto-ARIMA / PatchTST baselines
 ```

@@ -1,0 +1,140 @@
+"""Ablation of the candidate pool (Table 3 of the paper).
+
+How much of the result depends on having four candidates? The selection rule is
+re-run restricted to each subset of the pool and the resulting assignments are
+rescored -- with no refitting, since the rule only adjudicates among forecasts
+that were already locked.
+
+Two regimes are separated:
+
+  static   the rule selects once from cross-validated evidence, as deployed;
+  dynamic  the rule reselects on the early 2026 weeks and is scored on the
+           later weeks, which the reselection never observes.
+
+WEEK ALIGNMENT. Preprocessing shifts the bulletin week down by one, so a forecast
+stored under model week N carries the measurement the bulletin published as week
+N+1. Everything here is in BULLETIN numbering; see the README.
+
+Policies are compared PAIRWISE over the same series (Wilcoxon signed-rank).
+Comparing each policy's own reassigned subset would compare different sets of
+series and is not a valid contrast -- this is the single easiest mistake to make
+in this experiment.
+
+Inputs (place under ./data/, not redistributed; assembled from the public
+SINAVE bulletin):
+  data/cv_metrics_per_series.csv    series, stratum, model, smape, mase, rmse
+  data/weekly_2026_per_series.csv   series, stratum, week, observed, <model cols>
+  data/frozen_assignment.csv        series, stratum, model   (locked before 2026)
+
+Output: data/ablation_results.csv, plus the released copy in this repository.
+"""
+
+from __future__ import annotations
+
+import itertools
+
+import numpy as np
+import pandas as pd
+from scipy.stats import wilcoxon
+
+MODELS = ["prophet", "deepar", "ensemble", "stacking"]
+BAND = 1.05          # selection band on sMAPE, as in the paper
+SPLIT = 11           # last week used for reselection in the dynamic regime
+
+
+def smape(y: np.ndarray, f: np.ndarray) -> float:
+    y, f = np.asarray(y, float), np.asarray(f, float)
+    denom = (np.abs(y) + np.abs(f)) / 2
+    keep = denom > 0
+    return float(100 * np.mean(np.abs(y - f)[keep] / denom[keep]))
+
+
+def select(row: pd.Series, pool: tuple[str, ...]) -> str | None:
+    """The published rule, restricted to `pool`: sMAPE band, then MASE, then RMSE."""
+    s = {m: row[f"{m}_smape"] for m in pool if pd.notna(row.get(f"{m}_smape"))}
+    if not s:
+        return None
+    order = sorted(s, key=lambda m: s[m])
+    best = s[order[0]]
+    if len(order) == 1 or s[order[1]] > BAND * best:
+        return order[0]
+    tied = [m for m in s if s[m] <= BAND * best]
+    return min(tied, key=lambda m: (row[f"{m}_mase"], row[f"{m}_rmse"]))
+
+
+def pools() -> list[tuple[str, ...]]:
+    full = tuple(MODELS)
+    loo = [tuple(m for m in MODELS if m != drop) for drop in MODELS]
+    singles = [(m,) for m in MODELS]
+    return [full, *loo, *singles]
+
+
+def static_ablation(cv: pd.DataFrame, oos: pd.DataFrame) -> pd.DataFrame:
+    """One row per series and pool: the OOS sMAPE of the model that pool selects."""
+    key = oos.set_index(["series", "stratum"])
+    rows = []
+    for _, row in cv.iterrows():
+        k = (row["series"], row["stratum"])
+        if k not in key.index:
+            continue
+        entry = {"series": k[0], "stratum": k[1]}
+        for pool in pools():
+            m = select(row, pool)
+            entry["+".join(pool)] = key.loc[k, f"smape_{m}"] if m else np.nan
+        rows.append(entry)
+    return pd.DataFrame(rows)
+
+
+def dynamic_ablation(weekly: pd.DataFrame, frozen: pd.DataFrame) -> pd.DataFrame:
+    """Reselect on weeks <= SPLIT, score on the later weeks."""
+    base = {(r["series"], r["stratum"]): r["model"] for _, r in frozen.iterrows()}
+    rows = []
+    for (ser, stratum), g in weekly.groupby(["series", "stratum"]):
+        early, late = g[g.week <= SPLIT], g[g.week > SPLIT]
+        if len(early) < 4 or len(late) < 4:
+            continue
+        err = {m: (smape(early.observed, early[m]), smape(late.observed, late[m]))
+               for m in MODELS if m in g}
+        if len(err) < len(MODELS) or (ser, stratum) not in base:
+            continue
+        entry = {"series": ser, "stratum": stratum,
+                 "frozen": err[base[(ser, stratum)]][1]}
+        for pool in pools():
+            entry["+".join(pool)] = err[min(pool, key=lambda m: err[m][0])][1]
+        rows.append(entry)
+    return pd.DataFrame(rows)
+
+
+def summarize(per_series: pd.DataFrame, label: str) -> pd.DataFrame:
+    """Median per policy, with a paired test against the full pool."""
+    ref = "+".join(MODELS)
+    cols = [c for c in per_series.columns if c not in ("series", "stratum")]
+    out = []
+    for c in cols:
+        v = per_series[c].dropna()
+        p = (np.nan if c == ref else
+             float(wilcoxon(per_series[c], per_series[ref], zero_method="zsplit").pvalue))
+        out.append({"regime": label, "policy": c, "n": len(v),
+                    "median_smape": round(float(v.median()), 2),
+                    "mean_smape": round(float(v.mean()), 2),
+                    "p_vs_full_pool": None if np.isnan(p) else round(p, 3)})
+    return pd.DataFrame(out)
+
+
+if __name__ == "__main__":
+    cv = pd.read_csv("data/cv_metrics_per_series.csv")
+    cv = cv.pivot_table(index=["series", "stratum"], columns="model",
+                        values=["smape", "mase", "rmse"])
+    cv.columns = [f"{m}_{stat}" for stat, m in cv.columns]
+    cv = cv.reset_index()
+
+    oos = pd.read_csv("data/per_series_out_of_sample_2026.csv").rename(
+        columns={"entity": "series"})
+    weekly = pd.read_csv("data/weekly_2026_per_series.csv")
+    frozen = pd.read_csv("data/frozen_assignment.csv")
+
+    est = summarize(static_ablation(cv, oos), "static")
+    din = summarize(dynamic_ablation(weekly, frozen), "dynamic")
+    res = pd.concat([est, din], ignore_index=True)
+    res.to_csv("data/ablation_results.csv", index=False)
+    print(res.to_string(index=False))
