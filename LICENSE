@@ -1,6 +1,12 @@
 MIT License
 
-Copyright (c) 2026 The Authors (identity withheld for double-blind review)
+Copyright (c) 2026 Javier Augusto Rebull-Saucedo, Juan Carlos Pérez-Nava,
+Luis Gerardo Sánchez-Salazar, Grettel Barceló-Alonso, and
+Ruth Pérez-Hernández
+
+Scope: this license applies to the source code and documentation. It does not
+apply to the aggregate data files under `data/`; see `DATA_LICENSE.md` for their
+source, attribution, and reuse terms.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -47,6 +47,22 @@ def smape(y: np.ndarray, f: np.ndarray) -> float:
     return float(100 * np.mean(np.abs(y - f)[keep] / denom[keep]))
 
 
+def mae(y: np.ndarray, f: np.ndarray) -> float:
+    """Mean absolute error used to order MASE within one series/window.
+
+    The seasonal-naive denominator is common to every candidate for a given
+    series and window.  Dividing every MAE by that same positive constant does
+    not change the MASE ordering, so the released 2026 panel is sufficient for
+    the rule's MASE tie-break without redistributing the 2025 history.
+    """
+    return float(np.mean(np.abs(np.asarray(y, float) - np.asarray(f, float))))
+
+
+def rmse(y: np.ndarray, f: np.ndarray) -> float:
+    y, f = np.asarray(y, float), np.asarray(f, float)
+    return float(np.sqrt(np.mean((y - f) ** 2)))
+
+
 def select(row: pd.Series, pool: tuple[str, ...]) -> str | None:
     """The published rule, restricted to `pool`: sMAPE band, then MASE, then RMSE."""
     s = {m: row[f"{m}_smape"] for m in pool if pd.notna(row.get(f"{m}_smape"))}
@@ -84,7 +100,7 @@ def static_ablation(cv: pd.DataFrame, oos: pd.DataFrame) -> pd.DataFrame:
 
 
 def dynamic_ablation(weekly: pd.DataFrame, frozen: pd.DataFrame) -> pd.DataFrame:
-    """Reselect on weeks <= SPLIT, score on the later weeks."""
+    """Re-run the complete published rule early, then score on later weeks."""
     base = {(r["series"], r["stratum"]): r["model"] for _, r in frozen.iterrows()}
     rows = []
     for (ser, stratum), g in weekly.groupby(["series", "stratum"]):
@@ -92,15 +108,41 @@ def dynamic_ablation(weekly: pd.DataFrame, frozen: pd.DataFrame) -> pd.DataFrame
         if len(early) < 4 or len(late) < 4:
             continue
         err = {
-            m: (smape(early.observed, early[m]), smape(late.observed, late[m]))
+            m: {
+                "early_smape": smape(early.observed, early[m]),
+                # MAE and MASE induce the same ordering here; see ``mae``.
+                "early_mase_order": mae(early.observed, early[m]),
+                "early_rmse": rmse(early.observed, early[m]),
+                "late_smape": smape(late.observed, late[m]),
+            }
             for m in MODELS
             if m in g
         }
         if len(err) < len(MODELS) or (ser, stratum) not in base:
             continue
-        entry = {"series": ser, "stratum": stratum, "frozen": err[base[(ser, stratum)]][1]}
+        entry = {
+            "series": ser,
+            "stratum": stratum,
+            "frozen": err[base[(ser, stratum)]]["late_smape"],
+        }
+        evidence = pd.Series(
+            {
+                key: value
+                for m in MODELS
+                for key, value in (
+                    (f"{m}_smape", err[m]["early_smape"]),
+                    (f"{m}_mase", err[m]["early_mase_order"]),
+                    (f"{m}_rmse", err[m]["early_rmse"]),
+                )
+            }
+        )
         for pool in pools():
-            entry["+".join(pool)] = err[min(pool, key=lambda m: err[m][0])][1]
+            selected = select(evidence, pool)
+            if selected is None:  # all four candidates were checked above
+                raise RuntimeError(
+                    f"no eligible model for {ser!r}, {stratum!r}, {pool!r}"
+                )
+            entry["+".join(pool)] = err[selected]["late_smape"]
         rows.append(entry)
     return pd.DataFrame(rows)
 
@@ -115,7 +157,9 @@ def summarize(per_series: pd.DataFrame, label: str) -> pd.DataFrame:
         p = (
             np.nan
             if c == ref
-            else float(wilcoxon(per_series[c], per_series[ref], zero_method="zsplit").pvalue)
+            else float(
+                wilcoxon(per_series[c], per_series[ref], zero_method="zsplit").pvalue
+            )
         )
         out.append(
             {
