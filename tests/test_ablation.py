@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import csv
 import pathlib
+import subprocess
+import sys
 import unittest
 from unittest.mock import patch
 
@@ -130,3 +132,33 @@ class TestPublishedTable(unittest.TestCase):
                 self.assertEqual(
                     f"{float(r['p_vs_full_pool']):.2f}", p, f"p moved: {key}"
                 )
+
+
+class TestBaselinesCLI(unittest.TestCase):
+    """The PatchTST note must work in a fresh clone, where no panel is shipped."""
+
+    def test_patchtst_note_runs_without_the_undistributed_panel(self):
+        """It used to read the panel first and die with FileNotFoundError.
+
+        `data/weekly_series.csv` is not redistributed, so the mode the README
+        advertises as "prints the configuration and exits" failed instead.
+        """
+        script = (
+            pathlib.Path(__file__).resolve().parents[1] / "analysis" / "baselines.py"
+        )
+        out = subprocess.run(
+            [
+                sys.executable,
+                str(script),
+                "--mode",
+                "patchtst",
+                "--data",
+                "does/not/exist.csv",
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(out.returncode, 0, out.stderr)
+        self.assertIn("PatchTST", out.stdout)
+        self.assertNotIn("FileNotFoundError", out.stderr)
