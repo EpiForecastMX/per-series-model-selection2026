@@ -2,7 +2,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-data/
+# Los paneles ensamblados no se redistribuyen (terminos de datos abiertos del
+# boletin), pero la tabla suplementaria que el paper referencia SI se publica.
+data/*
+!data/per_series_out_of_sample_2026.csv
 outputs/
 checkpoints/
 lightning_logs/

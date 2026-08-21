@@ -1,8 +1,12 @@
 # Per-Series Model Selection for Weekly Depression Incidence Forecasting
 
-Anonymous code release supporting the double-blind submission
-*"Forecasting Weekly Depression Incidence in Mexico: A Multi-Model Framework
-with Auditable Per-Series Model Selection."*
+Code and supplementary material for
+
+> Rebull-Saucedo, J., Pérez-Nava, J., Sánchez-Salazar, L., Barceló-Alonso, G.,
+> Pérez-Hernández, R. *Forecasting Weekly Depression Incidence in Mexico:
+> A Multi-Model Framework with Auditable Per-Series Model Selection.*
+> 25th Mexican International Conference on Artificial Intelligence (MICAI 2026),
+> Chihuahua, Mexico. Springer, Lecture Notes in Artificial Intelligence.
 
 This repository provides a self-contained, reference implementation of the
 methodological core of the paper: four forecasters with complementary
@@ -10,9 +14,8 @@ inductive assumptions, a deterministic and auditable **per-series model
 selection rule**, the rolling-origin evaluation protocol, and the statistical
 tests and hierarchical-reconciliation sanity check reported in the paper.
 
-> Author names, affiliations and the institutional repository are withheld for
-> double-blind review. The complete production pipeline is released under the
-> authors' institutional account upon acceptance.
+This repository was first released anonymously for double-blind review; the
+paper has since been accepted and the author information above is now public.
 
 ## What is here
 
@@ -24,6 +27,7 @@ tests and hierarchical-reconciliation sanity check reported in the paper.
 | `analysis/statistical_tests.py` | Results / Out-of-sample | one-sided Wilcoxon signed-rank (CV) and Diebold-Mariano with HLN correction (2026) |
 | `analysis/reconciliation.py` | Discussion | minimum-trace (MinT, diagonal WLS) hierarchical reconciliation sanity check |
 | `analysis/baselines.py` | Table (baselines) | tuned Auto-ARIMA + Fourier and a PatchTST transformer under the identical CV |
+| `data/per_series_out_of_sample_2026.csv` | §4.2, Appendix A | **per-entity out-of-sample table**: sMAPE and MASE per model for all 111 series-stratum combinations |
 
 ## Models
 
@@ -48,6 +52,30 @@ federal entities are published as **open data** by the national epidemiological
 surveillance system (SINAVE) bulletin. The code expects pre-assembled weekly
 series under `data/` (not redistributed here; see the bulletin's open-data
 terms). Expected schemas are documented in each script.
+
+### Week alignment
+
+The preprocessing step shifts the bulletin week down by one, so a forecast
+stored under model week *N* carries the measurement the bulletin published as
+week *N+1*. **Scoring a forecast against the bulletin therefore requires mapping
+it back to bulletin numbering** (`bulletin_week = model_week + 1`). Every figure
+in the paper and in the table below is in bulletin numbering. Skipping this step
+compares observation and forecast one week apart, which silently inflates the
+error.
+
+### Supplementary table
+
+`data/per_series_out_of_sample_2026.csv` is the per-entity out-of-sample table
+referenced in §4.2 and Appendix A of the paper. One row per series-stratum
+combination (96 federal-entity, 12 socio-urban-region and 3 national series),
+with sMAPE and MASE for each of the four candidate models over **W03-W18** —
+the sixteen 2026 bulletin weeks for which every series has both an observation
+and a locked forecast. MASE is scaled by 52-week seasonal persistence.
+
+The headline national-aggregate evaluation in the paper runs over W02-W18, one
+week wider, because the national series has a locked forecast for W02 and the
+per-entity series do not. The two windows are reported separately and should not
+be pooled.
 
 ## Reproducing the reported statistics
 
