@@ -83,7 +83,10 @@ if __name__ == "__main__":
     ap.add_argument("--mode", choices=["sarima", "patchtst"], default="sarima")
     ap.add_argument("--data", default="data/weekly_series.csv")
     a = ap.parse_args()
-    df = pd.read_csv(a.data)
+    # La nota va ANTES de leer el panel. Estaba despues, asi que `--mode patchtst`
+    # moria con FileNotFoundError sobre data/weekly_series.csv --que no se
+    # distribuye-- en vez de imprimir la configuracion, que es lo que el README
+    # promete. Esta rama no necesita datos para nada.
     if a.mode == "patchtst":
         print(
             "PatchTST baseline: train a global GluonTS PatchTST per stratum "
@@ -92,6 +95,7 @@ if __name__ == "__main__":
             "release dependency-light."
         )
         raise SystemExit(0)
+    df = pd.read_csv(a.data)
     res = []
     for (s, st), g in df.groupby(["series", "stratum"]):
         out = cv_series_sarima(g.sort_values("week")["value"].to_numpy(float))
