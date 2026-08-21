@@ -2,17 +2,19 @@
 
 Code and supplementary material for
 
-> Rebull-Saucedo, J., Pérez-Nava, J., Sánchez-Salazar, L., Barceló-Alonso, G.,
-> Pérez-Hernández, R. *Forecasting Weekly Depression Incidence in Mexico:
+> Javier Augusto Rebull-Saucedo, Juan Carlos Pérez-Nava, Luis Gerardo
+> Sánchez-Salazar, Grettel Barceló-Alonso, and Ruth Pérez-Hernández.
+> *Forecasting Weekly Depression Incidence in Mexico:
 > A Multi-Model Framework with Auditable Per-Series Model Selection.*
 > 25th Mexican International Conference on Artificial Intelligence (MICAI 2026),
 > Chihuahua, Mexico. Springer, Lecture Notes in Artificial Intelligence.
 
-This repository provides a self-contained, reference implementation of the
-methodological core of the paper: four forecasters with complementary
-inductive assumptions, a deterministic and auditable **per-series model
-selection rule**, the rolling-origin evaluation protocol, and the statistical
-tests and hierarchical-reconciliation sanity check reported in the paper.
+This repository provides a self-contained reference implementation of the
+methodological core released with the paper: a deterministic and auditable
+**per-series model-selection rule**, the rolling-origin evaluation protocol,
+and the statistical tests, ablation, and hierarchical-reconciliation sanity
+check. It does not redistribute the production training pipeline or fitted
+forecaster artifacts.
 
 This repository was first released anonymously for double-blind review; the
 paper has since been accepted and the author information above is now public.
@@ -28,7 +30,7 @@ paper has since been accepted and the author information above is now public.
 | `analysis/reconciliation.py` | Discussion | minimum-trace (MinT, diagonal WLS) hierarchical reconciliation sanity check |
 | `analysis/baselines.py` | Table (baselines) | tuned Auto-ARIMA + Fourier and a PatchTST transformer under the identical CV |
 | `analysis/ablation.py` | §5.1, Table 3 | **ablation of the candidate pool**: the selection rule re-run on every subset, static and dynamic regimes, paired Wilcoxon against the full pool |
-| `data/per_series_out_of_sample_2026.csv` | §4.2, Appendix A | **per-entity out-of-sample table**: sMAPE and MASE per model for all 111 series-stratum combinations |
+| `data/per_series_out_of_sample_2026.csv` | §4.2, supplementary material | **per-entity out-of-sample table**: sMAPE and MASE per model for all 111 series-stratum combinations |
 | `data/cv_metrics_per_series.csv` | §5.1, Table 3 | frozen cross-validation evidence used by the static selection rule |
 | `data/weekly_2026_per_series.csv` | §5.1, Table 3 | bulletin-aligned W03–W18 observations and locked forecasts used by the dynamic experiment |
 | `data/frozen_assignment.csv` | §5.1, Table 3 | 99 directly observed assignments fixed before any 2026 observation existed |
@@ -45,10 +47,10 @@ per series:
 - a stacked hybrid (Prophet + ETS + gradient-boosted trees, non-negative
   ElasticNet meta-learner).
 
-Each forecaster wraps a widely used open-source library; this release contains
-the selection, evaluation and analysis code, which constitutes the
-methodological contribution. The four model wrappers follow the cited libraries
-directly.
+The forecasters were implemented with widely used open-source libraries. This
+release contains the selection, evaluation, and analysis code that constitutes
+the methodological contribution; it does not claim to be a drop-in copy of the
+production wrappers or training orchestration.
 
 ## Data
 
@@ -78,10 +80,12 @@ and scoring on the later weeks it never saw. Policies are compared **pairwise ov
 same series**; comparing each policy's own reassigned subset would compare different sets
 of series, which is the easiest way to get this experiment wrong.
 
-`data/ablation_results.csv` holds the published numbers. The headline finding is negative
-and is reported as such in the paper: no leave-one-out variant separates from the full
-pool, and a single-model policy matches it. What does separate from the frozen baseline
-is revision.
+`data/ablation_results.csv` holds the published numbers. The static finding is
+negative: no leave-one-out variant separates from the full pool, and a
+single-model policy matches it. In the dynamic regime, removing Prophet is the
+only leave-one-out comparison separated from the full pool at a nominal 5%
+level ($p=0.02$); the other three are not. Reselection lowers the full-pool
+median from 32.74% under the frozen assignment to 28.52%.
 
 The command below runs directly from a fresh clone and rewrites
 `data/ablation_results.csv` deterministically from the three released inputs.
@@ -103,14 +107,24 @@ be pooled.
 ## Reproducing the reported statistics
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-analysis.txt
 python analysis/ablation.py               # candidate-pool ablation (Table 3)
+python -m unittest discover -s tests -v   # regression tests for the full rule
 # The remaining scripts require the assembled panels described in their docstrings:
 python analysis/statistical_tests.py     # Wilcoxon (CV) + Diebold-Mariano (2026)
 python analysis/reconciliation.py         # MinT incoherence pre/post
 python analysis/baselines.py --help       # Auto-ARIMA / PatchTST baselines
 ```
 
-## License
+`requirements-analysis.txt` is the minimal environment for the released Table
+3 calculation and its tests. `requirements.txt` additionally lists the heavier
+forecasting libraries used by the broader experimental framework.
 
-Released under the MIT License (see `LICENSE`).
+## License and data terms
+
+The source code and documentation are released under the MIT License (see
+`LICENSE`). The aggregate CSV files under `data/` are derived from the public
+SINAVE bulletin and are not relicensed under MIT. Their source, attribution,
+and reuse terms are recorded in [`DATA_LICENSE.md`](DATA_LICENSE.md), including
+the official [DGE Terms of Free Use for Open
+Data](https://www.gob.mx/salud/documentos/terminos-de-libre-uso-de-datos-abiertos-de-la-direccion-general-de-epidemiologia).
