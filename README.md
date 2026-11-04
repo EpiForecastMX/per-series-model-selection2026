@@ -5,9 +5,11 @@ Code and supplementary material for
 > Javier Augusto Rebull-Saucedo, Juan Carlos Pérez-Nava, Luis Gerardo
 > Sánchez-Salazar, Grettel Barceló-Alonso, and Ruth Pérez-Hernández.
 > *Forecasting Weekly Depression Incidence in Mexico:
-> A Multi-Model Framework with Auditable Per-Series Model Selection.*
-> 25th Mexican International Conference on Artificial Intelligence (MICAI 2026),
-> Chihuahua, Mexico. Springer, Lecture Notes in Artificial Intelligence.
+> A Multi-model Framework with Auditable Per-series Model Selection.*
+> In: Ponce, H., Ochoa-Ruiz, G., Méndez-Gurrola, I.I. (eds) Advances in Soft
+> Computing. MICAI 2026. Lecture Notes in Computer Science, vol. 17149,
+> pp. 32–51. Springer, Cham (2027).
+> https://doi.org/10.1007/978-3-032-44176-8_3
 
 **What a fresh clone reproduces, and what it does not.** `analysis/ablation.py`
 runs end to end on the data shipped here and regenerates Table 3 byte-identically;
